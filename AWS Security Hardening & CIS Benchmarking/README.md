@@ -53,6 +53,14 @@
 **MTTR**: 72 hours | **MTTR**: 8 minutes  
 **Critical Risks**: 3 | **Critical Risks**: 0  
 
+## 📸 Results
+| Scenario | Image |
+|-------------|-------|
+| Non-compliant Configuration | ![Alert](images/ConfigAccess_False.png) |
+| Dashboard (with errors) | ![Alert](images/CloudWatch_WithErrors.png) |
+| Compliant Configuration | ![Alert](images/ConfigAccess_True.png) |
+| Dashboard (with errors) | ![Alert](images/CloudWatch_NoErrors.png) |
+
 ---
 ## 📘 Lessons Learned
 - Automation Scales Security
