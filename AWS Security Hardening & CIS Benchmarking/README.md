@@ -13,7 +13,7 @@
 
 ---
 ## 🏗️ Architecture
-![Architecture Diagram](images/ComplianceAutomation.png)
+![Architecture Diagram](images/Compliance_Automation.png)
 
 ---
 ## 🔍 Key Achievements  
