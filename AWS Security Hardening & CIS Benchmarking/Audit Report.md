@@ -81,25 +81,6 @@ pie
 | **NIST SI-4**         | Continuous monitoring  | Config+CloudWatch setup |
 ---
 
-
-## Appendix
-### A. Training ARNs:
-| Resource              | ARN                                                                   |
-|-----------------------|-----------------------------------------------------------------------|
-| **Lambda Role**       | (`arn:aws:iam::123456789:role/testclient-remediator`)                 | 
-| **Config Rule**       | (`arn:aws:config:us-east-1:123456789:config-rule/config-rule-test`)   |
----
-
-### B. Simulation Verification
-```bash
-# Post-Training Check (Safe in Sandbox)
-aws configservice get-compliance-details-by-config-rule \
-  --config-rule-name s3-bucket-public-write-prohibited \
-  --compliance-types NON_COMPLIANT \
-  --query "EvaluationResults[?contains(resourceId,'testclient')]"
-Expected Output: [] (All testclient resources compliant)
-```
-
 ## Next Learning Steps:
 
 Add RDS encryption simulation
