@@ -6,7 +6,7 @@
   - EC2 metadata service vulnerabilities  
   - No compliance automation  
 
-**Learning Objective**:  Implement AWS-native solutions
+**Objective**:  Implement AWS-native solutions
   - Achieve 90%+ PCI DSS compliance
   - Demonstrate Security Hub integration
   - Show Lambda auto-remediation capabilities
@@ -45,7 +45,7 @@
 **Critical Risks**: 3 | **Critical Risks**: 0  
 
 ---
-## 📘 Consulting Lessons Learned
+## 📘 Lessons Learned
 - Automation Scales Security
 - Reduced manual compliance checks from 20hrs → 1hr/week
 - Client Communication Matters
