@@ -1,19 +1,21 @@
-**Disclaimer**: This project demonstrates AWS security skills using fictional scenarios.  
-No real organizations or customer data are involved.  
-
 ## 🛡️ Mock Client Profile  
-**Client**: SecureFinTech Corp (Hypothetical FinTech Startup)  
-**Simulated Challenge**:  
-- Failed PCI audit due to:  
+**Client**: SecureFinTech Corp (Hypothetical FinTech Startup)
+
+**Simulated Challenge**: Failed PCI audit 
   - Public S3 buckets (`testclient-transactions`)  
   - EC2 metadata service vulnerabilities  
   - No compliance automation  
 
-**Learning Objective**:  
-Implement AWS-native solutions to:  
-✅ Achieve 90%+ PCI DSS compliance  
-✅ Demonstrate Security Hub integration  
-✅ Show Lambda auto-remediation capabilities
+**Learning Objective**:  Implement AWS-native solutions
+  - Achieve 90%+ PCI DSS compliance
+  - Demonstrate Security Hub integration
+  - Show Lambda auto-remediation capabilities
+
+---
+## 🏗️ Architecture
+![Architecture Diagram](images/ComplianceAutomation.png)
+
+---
 ## 🔍 Key Achievements  
 
 | Risk Finding | Remediation Action | AWS Services | Result |  
@@ -50,23 +52,25 @@ C --> D[S3 Auto-Lock]
 C --> E[EC2 Metadata Fix]
 ```
 
-📘 Consulting Lessons Learned
-Automation Scales Security
+---
+## 📘 Consulting Lessons Learned
+- Automation Scales Security
+- Reduced manual compliance checks from 20hrs → 1hr/week
+- Client Communication Matters
+- Translated "IMDSv2" to "Credential Theft Prevention" for execs
+- Cost-Effective Solutions
+- Used native AWS tools instead of $15k/yr third-party software
 
-Reduced manual compliance checks from 20hrs → 1hr/week
-
-Client Communication Matters
-
-Translated "IMDSv2" to "Credential Theft Prevention" for execs
-
-Cost-Effective Solutions
-
-Used native AWS tools instead of $15k/yr third-party software
-
-bash
-# Sample Config Rule ID Used
+---
+## Sample Config Rule ID Used
+```bash
 aws configservice put-config-rule \
   --config-rule '{
     "ConfigRuleName": "s3-public-block", 
     "Source": {"Owner":"AWS","SourceIdentifier":"S3_BUCKET_PUBLIC_WRITE_PROHIBITED"}
   }'
+```
+
+---
+*Disclaimer: This project demonstrates AWS security skills using fictional scenarios.  
+No real organizations or customer data are involved.*  
