@@ -49,6 +49,8 @@ A[Security Hub Finding] --> B(Config Rule Trigger)
 B --> C{Lambda Remediation}
 C --> D[S3 Auto-Lock]
 C --> E[EC2 Metadata Fix]
+
+
 📘 Consulting Lessons Learned
 Automation Scales Security
 
