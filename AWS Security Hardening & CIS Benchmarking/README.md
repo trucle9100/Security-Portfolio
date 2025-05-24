@@ -44,14 +44,6 @@
 **MTTR**: 72 hours | **MTTR**: 8 minutes  
 **Critical Risks**: 3 | **Critical Risks**: 0  
 
-```mermaid
-graph LR
-A[Security Hub Finding] --> B(Config Rule Trigger)
-B --> C{Lambda Remediation}
-C --> D[S3 Auto-Lock]
-C --> E[EC2 Metadata Fix]
-```
-
 ---
 ## 📘 Consulting Lessons Learned
 - Automation Scales Security
