@@ -48,8 +48,6 @@
 ## 📘 Lessons Learned
 - Automation Scales Security
 - Reduced manual compliance checks from 20hrs → 1hr/week
-- Client Communication Matters
-- Translated "IMDSv2" to "Credential Theft Prevention" for execs
 - Cost-Effective Solutions
 - Used native AWS tools instead of $15k/yr third-party software
 
