@@ -12,6 +12,13 @@
   - Show Lambda auto-remediation capabilities
 
 ---
+## 🛠️ Test Environment Setup
+- Created intentionally insecure resources:
+  - Public S3 bucket
+  - Over-permissive IAM role
+- Used Terraform/AWS CLI for reproducibility
+
+---
 ## 🏗️ Architecture
 ![Architecture Diagram](images/ComplianceAutomation.png)
 
@@ -26,7 +33,9 @@
 
 ---
 
-## 🛡️ Compliance Mapping  
+## 🛡️ Compliance Monitoring & Mapping
+- AWS Security Hub provided centralized visibility
+- CIS benchmarks guided remediation priorities
 
 | AWS Service | Security Control | Compliance Standard |  
 |-------------|------------------|---------------------|  
