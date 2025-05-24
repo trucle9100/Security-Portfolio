@@ -86,5 +86,8 @@ aws configservice put-config-rule --config-rule '
     "SourceIdentifier": "arn:aws:lambda:us-east-1:123456789:function:testclient-encryption-check"
   }
 }'
-Disclaimer: This project demonstrates AWS security skills using fictional scenarios.
-No real patient health information (PHI) or client data was used.
+```
+
+---
+*Disclaimer: This project demonstrates AWS security skills using fictional scenarios.
+No real patient health information (PHI) or client data was used.*
