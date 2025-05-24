@@ -1,6 +1,4 @@
 # TestClient HealthTech - HIPAA Compliance Audit Report  
-**Prepared by**: [Your Name], AWS Compliance Consultant  
-**Assessment Period**: November 2023  
 
 ---
 
@@ -42,88 +40,96 @@ def lambda_handler(event, context):
     resource = event['detail']['resourceId']
     message = f"ALERT: {resource} violates encryption policy"
     sns.publish(TopicArn=TOPIC_ARN, Message=message)
-2. Compliance Visibility Gaps (High)
-Risk: Manual audits missed 12/15 encryption failures
-AWS Resources:
+```
 
-CloudWatch Dashboard: testclient-compliance
+### 2. Compliance Visibility Gaps (High)
+**Risk**: Manual audits missed 12/15 encryption failures
+**AWS Resources**:
+- CloudWatch Dashboard: `testclient-compliance`
+- SNS Topic: `testclient-compliance-alerts`
 
-SNS Topic: testclient-compliance-alerts
+**Violated Standards**:
+- HIPAA §164.312(b) (Audit Controls)
 
-Violated Standards:
-
-HIPAA §164.312(b) (Audit Controls)
-
-Remediation:
-
-bash
+**Remediation**:
+```bash
 # Enable Config Continuous Monitoring
 aws configservice put-configuration-recorder \
   --configuration-recorder name=default,roleARN=arn:aws:iam::123456789:role/config-role
-3. Delayed Incident Response (Medium)
-Risk: 21-day gap between violation & detection
-AWS Resources:
+```
 
-EventBridge Rule: testclient-compliance-alerts
+### 3. Delayed Incident Response (Medium)
+**Risk**: 21-day gap between violation & detection
+**AWS Resources**:
+- EventBridge Rule: `testclient-compliance-alerts`
+- Lambda Function: `testclient-compliance-alerter`
 
-Lambda Function: testclient-compliance-alerter
+**Violated Standards**:
+- NIST IR-4 (Incident Response)
 
-Violated Standards:
-
-NIST IR-4 (Incident Response)
-
-Remediation:
-
-json
+**Remediation**:
+```json
 // EventBridge Rule Pattern
 {
   "source": ["aws.config"],
   "detail-type": ["Config Rules Compliance Change"]
 }
-Compliance Gap Analysis
-Control	Requirement	Initial State	Remediated State
-HIPAA §164.312(b)	Audit Controls	Manual checks	Continuous monitoring
-CIS AWS 4.3	EBS Encryption	58% encrypted	100% encrypted
-NIST SI-4	System Monitoring	Partial coverage	Full visibility
-Remediation Summary
-Technical Implementation
-Automated Detection:
+```
 
-Custom Config rule scans EBS volumes hourly
+---
+## Compliance Gap Analysis
+| Control	            | Requirement           | Initial State          | Remediated State        |
+|-----------------------|-----------------------|------------------------|-------------------------|
+| **HIPAA §164.312(b)** | Audit Controls      | Manual checks     | Continuous monitoring  |
+| **CIS AWS 4.3**           | EBS Encryption     | 58% encrypted  | 100% encrypted |
+| **NIST SI-4**         | System Monitoring  | Partial coverage | Full visibility |
+---
 
-bash
-aws configservice put-config-rule --config-rule file://encrypted-ebs-rule.json
-Real-Time Alerts:
+## Remediation Summary
+### Technical Implementation
 
-Lambda forwards findings to SNS/Slack within 8 minutes
+- #### Automated Detection:
+    - Custom Config rule scans EBS volumes hourly
+    
+    ```bash
+    aws configservice put-config-rule --config-rule file://encrypted-ebs-rule.json
+    ```
 
-Executive Visibility:
+- #### Real-Time Alerts:
+    - Lambda forwards findings to SNS/Slack within 8 minutes
 
-CloudWatch dashboard tracks compliance trends
+- #### Executive Visibility:
+    - CloudWatch dashboard tracks compliance trends
 
-Architecture & Verification
-Workflow Diagram
-Monitoring Architecture
+- #### Architecture & Verification
+    - *INSERT Workflow Diagram*
+    - *INSERT Monitoring Architecture*
 
-Verification Steps
-Force non-compliance:
+- #### Verification Steps
+    - Force non-compliance:
 
-bash
-aws ec2 create-volume --size 5 --availability-zone us-east-1a  # Unencrypted
-Confirm alert received:
-Slack Alert
+    ```bash
+    aws ec2 create-volume --size 5 --availability-zone us-east-1a  # Unencrypted
+    ```
 
-Validate dashboard update:
+- #### Confirm alert received:
+    - Slack Alert
+    - Validate dashboard update:
 
-bash
-aws cloudwatch get-metric-data --metric-data-queries file://queries.json
-Appendix
-A. Key ARNs
-Resource	ARN
-Config Rule	arn:aws:config:us-east-1:123456789:config-rule/testclient-encrypted-ebs
-Lambda Function	arn:aws:lambda:us-east-1:123456789:function:testclient-compliance-alerter
-B. Sample CloudWatch Dashboard
-json
+    ```bash
+    aws cloudwatch get-metric-data --metric-data-queries file://queries.json
+    ```
+
+---
+## Appendix
+### Key ARNs
+| Resource              | ARN            |
+|-----------------------|------------------------|
+| **Config Rule**       | `arn:aws:config:us-east-1:123456789:config-rule/testclient-encrypted-ebs` |
+| **Lambda Function**           | `arn:aws:lambda:us-east-1:123456789:function:testclient-compliance-alerter`    |
+
+### Sample CloudWatch Dashboard
+```json
 {
   "widgets": [
     {
@@ -141,7 +147,7 @@ json
     }
   ]
 }
-Disclosure: This report simulates AWS compliance automation techniques using test resources. No real patient data was accessed or stored.
+```
 
-"This system transformed our compliance from reactive to proactive."
-– Mock CISO, TestClient HealthTech
+---
+*Disclosure: This report simulates AWS compliance automation techniques using test resources. No real patient data was accessed or stored.*
