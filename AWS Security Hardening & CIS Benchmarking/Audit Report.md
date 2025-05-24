@@ -23,8 +23,8 @@ pie
 
 ## Simulated Findings
 1. Public S3 Bucket (Critical)
-    - Test Resources: s3://testclient-transaction-logs (Training bucket)
-    - Config Rule: s3-bucket-public-write-prohibited
+    - Test Resources: (`s3://testclient-transaction-logs`) (Training bucket)
+    - Config Rule: (`s3-bucket-public-write-prohibited`)
     - Learning Objective: Demonstrate public access remediation
     - Mapped Control: PCI DSS 3.4
     - Solution: Training Lambda Script (Python)
@@ -41,8 +41,8 @@ pie
 
 2. EC2 IMDSv1 Exposure (High)
     - Test Resources:
-        * EC2: i-0TESTCLIENT12345 (Training instance)
-    - Config Rule: ec2-imdsv2-check
+        * EC2: (`i-0TESTCLIENT12345`) (Training instance)
+    - Config Rule: (`ec2-imdsv2-check`)
     - Learning Objective: Enforce metadata security, Validate CIS 4.1 compliance
     - Solution (Terraform): Sandbox EC2 Configuration
         ```hcl
@@ -59,8 +59,8 @@ pie
         
 3. Delayed Incident Response
     - Training Setup:
-       * CloudWatch Alarm: training-compliance-breach
-       * SNS Topic: arn:aws:sns:us-east-1:123456789:testclient-alerts
+       * CloudWatch Alarm: (`training-compliance-breach`)
+       * SNS Topic: (`arn:aws:sns:us-east-1:123456789:testclient-alerts`)
     - Learning Objective: Build real-time monitoring
     - Solution (Bash): Training Alert Configuration
         ```bash
@@ -83,8 +83,8 @@ pie
 
 
 ## Appendix
+- Training ARNs:
 
-A. Training ARNs
 Resource	ARN
 Lambda Role	arn:aws:iam::123456789:role/testclient-remediator
 Config Rule	arn:aws:config:us-east-1:123456789:config-rule/config-rule-test
