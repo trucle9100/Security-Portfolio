@@ -1,6 +1,4 @@
 # SecureFinTech Corp - Cloud Security Simulation Report  
-**Type**: AWS Training Exercise | **No Production Data Used**  
-
 ---
 
 ## Executive Summary  
