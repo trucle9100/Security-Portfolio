@@ -36,26 +36,8 @@ pie
                     PublicAccessBlockConfiguration=SAFE_POLICY
                 )
         ```
-
-2. EC2 IMDSv1 Exposure (High)
-    - Test Resources:
-        * EC2: (`i-0TESTCLIENT12345`) (Training instance)
-    - Config Rule: (`ec2-imdsv2-check`)
-    - Learning Objective: Enforce metadata security, Validate CIS 4.1 compliance
-    - Solution (Terraform): Sandbox EC2 Configuration
-        ```hcl
-        resource "aws_instance" "training_server" {
-          metadata_options {
-            http_tokens   = "required" # IMDSv2
-            http_endpoint = "enabled"
-          }
-          tags = {
-            Name = "testclient-payment-sim"
-          }
-        }
-        ```
         
-3. Delayed Incident Response
+2. Delayed Incident Response
     - Training Setup:
        * CloudWatch Alarm: (`training-compliance-breach`)
        * SNS Topic: (`arn:aws:sns:us-east-1:123456789:testclient-alerts`)
