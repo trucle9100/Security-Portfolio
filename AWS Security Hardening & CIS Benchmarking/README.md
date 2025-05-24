@@ -1,4 +1,3 @@
-# Automated PCI DSS Compliance (Training Simulation)  
 **Disclaimer**: This project demonstrates AWS security skills using fictional scenarios.  
 No real organizations or customer data are involved.  
 
