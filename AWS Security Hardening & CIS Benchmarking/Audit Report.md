@@ -80,14 +80,13 @@ pie
 ---
 
 ## Next Learning Steps:
+- Add RDS encryption simulation
+- Practice cross-account Security Hub
+- Explore Service Control Policies (SCPs)
 
-Add RDS encryption simulation
-
-Practice cross-account Security Hub
-
-Explore Service Control Policies (SCPs)
-
+---
 "This exercise helped our team understand compliance automation in a risk-free environment."
-– Mock Security Lead, SecureFinTech Corp Training Lab
+– _Mock Security Lead, SecureFinTech Corp Training Lab_
 
-Disclosure: This report contains no real client data. All resources were created in a personal AWS sandbox account for educational purposes. Organization names are fictional.
+---
+*Disclosure: This report contains no real client data. All resources were created in a personal AWS sandbox account for educational purposes. Organization names are fictional.*
