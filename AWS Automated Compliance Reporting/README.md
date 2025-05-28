@@ -58,10 +58,11 @@ Implement automated compliance monitoring for:
 ## 📸 Results  
 | Scenario | Image |  
 |----------|-------|  
-| Non-Compliant EBS Volume | ![Config Finding](images/UnencryptedEBS.png) |  
-| CloudWatch Dashboard | ![Dashboard](images/ComplianceDashboard.png) |  
-| SNS Alert | ![Alert](images/SNSEmail.png) |  
-| Config Rule Detail | ![Rule](images/CustomConfigRule.png) |  
+| Non-Compliant EBS Volume | ![Config Finding](images/Noncompliant_Resources.png) |  
+| CloudWatch Dashboard | ![Dashboard](images/CloudWatch_Dashboard.png) |  
+| Lambda Test Alert | ![Alert](images/LambdaFunctionTest.png) |  
+| Working SNS Email | ![Rule](images/Lambda_EventBridge_Trigger.png) |
+| Config Rule Detail | ![Rule](images/ConfigRuleDetail.png) |
 
 ---
 ## 📘 Lessons Learned  
