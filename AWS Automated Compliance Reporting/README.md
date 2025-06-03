@@ -26,7 +26,7 @@ Implement automated compliance monitoring for:
 
 ---
 ## 🏗️ Architecture  
-![Compliance Monitoring Flow](images/ComplianceMonitoringArch.png)  
+![Compliance Monitoring Flow](images/Monitoring_Automation.png)  
 
 ---
 ## 🔍 Key Achievements  
