@@ -102,12 +102,12 @@ aws sts assume-role \
 
 **Testing My Security**
 ```bash
-# I tested by breaking things on purpose:
+# Tested by breaking things on purpose:
 aws ec2 create-volume --size 8 --availability-zone us-east-1a  # Unencrypted (should alert)
 aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 ```
 
-## 💰 Business Value I Delivered
+## 💰 Business Value Delivered
 
 **Cost Savings:**
 - $20k/year: Eliminated third-party security tools
