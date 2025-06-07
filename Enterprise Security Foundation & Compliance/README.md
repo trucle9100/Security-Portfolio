@@ -18,7 +18,7 @@
 
 ---
 ## 🏗️ Architecture
-**Multi-Account Pattern (Enterprise Standard)**
+**Single-Account Pattern (Enterprise Standard)**
 - Main Security Account:
   - Production → Secure cross-account roles
   - Development → Permission boundaries
@@ -55,7 +55,7 @@ aws ec2 modify-instance-metadata-options \
 3. Enabled Automatic Encryption
 ```bash
 # Made encryption default for all new storage
-aws ec2 enable-ebs-encryption-by-default
+aws ec2 enable-ebs-encryption-by-default --region us-east-1
 ```
 
 4. Implemented Cross-Account Security
