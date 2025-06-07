@@ -80,8 +80,8 @@ aws sts assume-role \
 ## 📊 My Results
 | What Was Measured | Before | After | Improvement |  
 |--------------|--------------------|--------------|--------|  
-| Security Hub Score | 42% | 89% | +47 points |  
-| Critical Findings | 8 | 0 | 100% eliminated |  
+| Security Hub Score | 30% | 80% | +50 points |  
+| Critical Findings | 5 | 0 | 100% eliminated |  
 | Time to Fix Issues | 3 days | 15 minutes | 12x faster |  
 | Config Rules Passing | 3/12 | 12/12 | 100% compliant |  
 | Manual Audit Time | 3 weeks | 2 days | 85% reduction |  
