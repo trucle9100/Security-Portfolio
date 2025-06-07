@@ -32,7 +32,7 @@
 - CloudWatch: Executive security metrics
 
 ![Architecture Diagram](images/securitycompliancediagram.drawio.png)
-
+1
 ---
 ## 🛠️ How Each Problem was Fixed
 
