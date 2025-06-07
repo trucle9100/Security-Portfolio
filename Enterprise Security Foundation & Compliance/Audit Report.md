@@ -9,7 +9,7 @@
 ### Key Results  
 | What We Fixed | Before | After |  
 |--------|----------------|-----------------|  
-| Security Score | 42% | 89% |  
+| Security Score | 30% | 80% |  
 | Critical Issues | 8 | 0 |  
 | Time to Fix Problems | 3 days | 15 minutes |  
 
