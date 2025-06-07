@@ -2,8 +2,8 @@
 ---
 
 ## Executive Summary  
-- The Challenge: GlobalTech had 8 critical security gaps across their AWS accounts with only 42% compliance score.
-- What Was Built: Enterprise security foundation with automated monitoring that achieved 89% compliance in 4 hours.
+- The Challenge: GlobalTech had 8 critical security gaps across their AWS accounts with only 30% compliance score.
+- What Was Built: Enterprise security foundation with automated monitoring that achieved 80% compliance in 4 hours.
 - Business Impact: Reduced audit prep from 3 weeks to 2 days, eliminated all critical findings.
 
 ### Key Results  
