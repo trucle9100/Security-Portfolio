@@ -89,18 +89,66 @@ aws ec2 enable-ebs-encryption-by-default
 
 ---
 ## Technical Architecture
+- Main Account (Security Hub)
+    - Production → Secure cross-account role
+    - Development → Permission boundaries applied
+    - Monitoring → Compliance dashboard
 
 ---
-## How I Tested Everything
+## How To Test
+1. Break Things on Purpose
+  ```bash
+# Create insecure resources to test alerts
+aws ec2 create-volume --size 8 --availability-zone us-east-1a  # Unencrypted
+aws s3 mb s3://test-public-$(date +%s)  # Try to make public
+```
+
+2. Verify Fixes Work
+  ```bash
+# Check compliance scores improved
+aws securityhub get-findings --filters ComplianceStatus=FAILED
+```
+2. Test Permission Boundaries
+  ```bash
+# Try to escalate privileges (should fail)
+aws iam create-policy --policy-name AdminPolicy --policy-document file://admin.json
+# Expected: Access Denied
+```
 
 ---
 ## Business Results
+- Security Improvements
+    - Zero critical findings
+    - Increased compliance score
+    - Faster response time
+- Cost Savings
+    - Savings on third-party security tools
+    - Less audit scope
+    - Less manual work
 
 ---
-## What To Do In Production
+## What To Do Different In Production
+1. Use AWS Organizations: Real multi-account setup with SCPs
+2. Add AWS GuardDuty: Runtime threat detection
+3. Implement AWS CloudTrail: Complete API logging
+4. Set up AWS Systems Manager: Patch management
+5. Add AWS Inspector: Vulnerability scanning
 
 ---
 ## Key Commands I Used
+```bash
+# Enable Security Hub
+aws securityhub enable-security-hub
+
+# Deploy Config rule  
+aws configservice put-config-rule --config-rule file://s3-public-block.json
+
+# Create cross-account role
+aws iam create-role --role-name CrossAccountRole --assume-role-policy-document file://trust-policy.json
+
+# Test role assumption
+aws sts assume-role --role-arn ROLE_ARN --external-id unique-id-123 --role-session-name test
+```
 
 ---
 *Disclosure: This project demonstrates enterprise AWS security skills using simulated scenarios. No production data was involved.*
