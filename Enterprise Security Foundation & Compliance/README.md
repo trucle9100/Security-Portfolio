@@ -123,9 +123,9 @@ aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 ---
 ## 🎯 Advanced Skills Demonstrated
 - Enterprise Security Architecture
-  - Multi-account security patterns
-  - Cross-account IAM with external IDs
-  - Permission boundaries for privilege control
+  - Cross-account IAM role patterns (single-account implementation)
+  - Enterprise IAM patterns within single account
+  - Cross-account role architecture fundamentals
 - Compliance Automation
   - CIS AWS Foundations Benchmark implementation
   - SOC2 Type II controls mapping
