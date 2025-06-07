@@ -100,7 +100,7 @@ aws sts assume-role \
 - Config Rules: 12 compliance rules checking 24/7
 - CloudWatch: Executive metrics and trends
 
-**Testing My Security**
+**Testing Security**
 ```bash
 # Tested by breaking things on purpose:
 aws ec2 create-volume --size 8 --availability-zone us-east-1a  # Unencrypted (should alert)
