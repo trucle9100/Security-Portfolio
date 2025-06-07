@@ -135,7 +135,7 @@ aws iam create-policy --policy-name AdminPolicy --policy-document file://admin.j
 5. Add AWS Inspector: Vulnerability scanning
 
 ---
-## Key Commands I Used
+## Key Commands Used
 ```bash
 # Enable Security Hub
 aws securityhub enable-security-hub
