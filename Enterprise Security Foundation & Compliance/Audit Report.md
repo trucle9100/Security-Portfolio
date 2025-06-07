@@ -49,7 +49,7 @@ aws ec2 modify-instance-metadata-options \
 aws ec2 enable-ebs-encryption-by-default
 ```
 
-4. Weak Cross-Account Access (Multi-Account Security)
+4. Weak Cross-Account Access (Single-Account Security)
     - The Problem: Other AWS accounts could access resources too easily
       - No external ID requirement
       - Risk of "confused deputy" attacks
