@@ -31,7 +31,7 @@
 - Permission Boundaries: Developer guardrails
 - CloudWatch: Executive security metrics
 
-![Architecture Diagram](images/ComplianceAutomation.png)
+![Architecture Diagram](images/securitycompliancediagram.drawio.png)
 
 ---
 ## 🛠️ How Each Problem was Fixed
