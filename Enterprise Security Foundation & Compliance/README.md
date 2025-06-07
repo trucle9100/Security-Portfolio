@@ -77,7 +77,7 @@ aws sts assume-role \
 
 ---
 
-## 📊 My Results
+## 📊 Results
 | What Was Measured | Before | After | Improvement |  
 |--------------|--------------------|--------------|--------|  
 | Security Hub Score | 30% | 80% | +50 points |  
