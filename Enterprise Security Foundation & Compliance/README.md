@@ -1,7 +1,7 @@
 ## 🛡️ What Was Built 
 **The Challenge**: GlobalTech had only 42% security compliance and failed their SOC2 audit
 
-**My Solution**: Built enterprise security foundation achieving 89% compliance in 4 hours
+**Solution**: Built enterprise security foundation achieving 89% compliance in 4 hours
 
 **Business Impact**:  Saved $20k annually and reduced audit prep from 3 weeks to 2 days
 
