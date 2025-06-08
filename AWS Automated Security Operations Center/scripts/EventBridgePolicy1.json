@@ -1,0 +1,1 @@
+{ "Version": "2012-10-17", "Statement": [ { "Sid": "AllowConfigAndGuardDuty", "Effect": "Allow", "Principal": { "Service": ["config.amazonaws.com", "guardduty.amazonaws.com"] }, "Action": "events:PutEvents", "Resource": "*" } ] }
