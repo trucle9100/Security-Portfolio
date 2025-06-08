@@ -103,8 +103,9 @@ def quarantine_ec2_instance(instance_id):
 ---
 
 
-🚨 Real-Time Security Monitoring
-Automated Detection & Response
+## 🚨 Real-Time Monitoring 
+
+**Automated Detection & Response**
 What Triggers: Config rule violations, GuardDuty findings, security group changes
 How Fast: 30-second detection, 2-minute remediation
 Where: EventBridge → Lambda → SNS → Slack/Email/PagerDuty
