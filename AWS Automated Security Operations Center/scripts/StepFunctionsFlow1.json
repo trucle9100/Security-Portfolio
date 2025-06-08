@@ -1,0 +1,20 @@
+{
+  "Comment": "Simplified security incident response workflow",
+  "StartAt": "AssessIncident",
+  "States": {
+    "AssessIncident": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "SecurityAutoRemediation",
+        "Payload.$": "$"
+      },
+      "Next": "LogIncident"
+    },
+    "LogIncident": {
+      "Type": "Pass",
+      "Result": "Incident logged successfully",
+      "End": true
+    }
+  }
+}
