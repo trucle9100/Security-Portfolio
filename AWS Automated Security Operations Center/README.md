@@ -1,9 +1,11 @@
-🛡️ AWS Automated Security Operations & Incident Response
-🛡️ What Was Built
-The Challenge: Enterprise needed automated security operations to reduce incident response time from hours to minutes
-Solution: Built comprehensive Security Operations Center (SOC) with automated threat detection, response, and compliance monitoring
-Business Impact: Achieved 95% automated remediation rate and reduced security incident response time by 90%
+##🛡️ What Was Built
+**The Challenge**: Enterprise needed automated security operations to reduce incident response time from hours to minutes
 
+**Solution**: Built comprehensive Security Operations Center (SOC) with automated threat detection, response, and compliance monitoring
+
+**Business Impact**: Achieved 95% automated remediation rate and reduced security incident response time by 90%
+
+---
 🔍 The Problem Solved
 Manual security incident response taking 2-4 hours
 No automated compliance monitoring
