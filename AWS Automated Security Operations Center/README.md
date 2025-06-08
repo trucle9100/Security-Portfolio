@@ -215,11 +215,12 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 ## 📸 Evidence
 | What Was Built | Screenshot |
 |--------------|--------------------|
-| Security Operations Dashboard | ![Capture](images/ConfigRuleDetail.jpg) |
-| Config Rules Compliance | ![Capture](images/ConfigRuleDetail.jpg) |
-| Lambda Remediation Logs | ![Capture](images/ConfigRuleDetail.jpg) |
-| EventBridge Automation Rules | ![Capture](images/ConfigRuleDetail.jpg) |
-| Step Functions Workflow | ![Capture](images/ConfigRuleDetail.jpg) |
+| Security Operations Dashboard | ![Capture](images/CloudWatchPhase5.jpg) |
+| Config Rules Compliance (Good) | ![Capture](images/ConfigStatusBefore.jpg) |
+| Config Rules Compliance (Bad) | ![Capture](images/ComplianceStatusAfter.jpg) |
+| Lambda Remediation Logs | ![Capture](images/CloudwatchLog.jpg) |
+| EventBridge Automation Rules | ![Capture](images/EventBridgeRules.jpg) |
+| Step Functions Workflow | ![Capture](images/StepFunctions.jpg) |
 
 ---
 
