@@ -1,4 +1,4 @@
-##🛡️ What Was Built
+## 🛡️ What Was Built 
 **The Challenge**: Enterprise needed automated security operations to reduce incident response time from hours to minutes
 
 **Solution**: Built comprehensive Security Operations Center (SOC) with automated threat detection, response, and compliance monitoring
@@ -6,7 +6,7 @@
 **Business Impact**: Achieved 95% automated remediation rate and reduced security incident response time by 90%
 
 ---
-🔍 The Problem Solved
+## 🔍 The Problem Solved
 Manual security incident response taking 2-4 hours
 No automated compliance monitoring
 Security violations going undetected for days
@@ -16,7 +16,8 @@ Inability to isolate compromised resources automatically
 No automated threat intelligence integration
 Reactive vs proactive security posture
 
-🏗️ Architecture
+---
+## 🏗️ Architecture
 Event-Driven Security Automation Pattern
 Detection Layer: Config Rules + GuardDuty findings
 Processing Layer: EventBridge routing + Lambda remediation
