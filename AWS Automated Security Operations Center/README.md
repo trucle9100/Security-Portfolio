@@ -18,21 +18,24 @@
 
 ---
 ## 🏗️ Architecture
-Event-Driven Security Automation Pattern
-Detection Layer: Config Rules + GuardDuty findings
-Processing Layer: EventBridge routing + Lambda remediation
-Response Layer: Step Functions orchestration + SNS alerting
-Monitoring Layer: CloudWatch dashboards + real-time metrics
-Core Components Implemented
-AWS Config: Continuous compliance monitoring (50+ rules)
-EventBridge: Real-time security event routing
-Lambda: Automated remediation functions
-Step Functions: Complex incident response workflows
-GuardDuty: Threat intelligence and anomaly detection
-CloudWatch: Executive security dashboards and alerting
+**Event-Driven Security Automation Pattern**
+- Detection Layer: Config Rules + GuardDuty findings
+- Processing Layer: EventBridge routing + Lambda remediation
+- Response Layer: Step Functions orchestration + SNS alerting
+- Monitoring Layer: CloudWatch dashboards + real-time metrics
 
+**Core Components Implemented**
+- AWS Config: Continuous compliance monitoring (50+ rules)
+- EventBridge: Real-time security event routing
+- Lambda: Automated remediation functions
+- Step Functions: Complex incident response workflows
+- GuardDuty: Threat intelligence and anomaly detection
+- CloudWatch: Executive security dashboards and alerting
 
-🛠️ How Each Problem was Fixed
+![Architecture Diagram](images/securitycompliancediagram.png)
+
+---
+## 🛠️ How Each Problem was Fixed
 1. Automated Security Group Remediation
 def remediate_security_group(sg_id):
     """Remove overly permissive rules automatically"""
