@@ -7,14 +7,14 @@
 
 ---
 ## 🔍 The Problem Solved
-Manual security incident response taking 2-4 hours
-No automated compliance monitoring
-Security violations going undetected for days
-No centralized security dashboard for executives
-Manual evidence collection during incidents
-Inability to isolate compromised resources automatically
-No automated threat intelligence integration
-Reactive vs proactive security posture
+- Manual security incident response taking 2-4 hours
+- No automated compliance monitoring
+- Security violations going undetected for days
+- No centralized security dashboard for executives
+- Manual evidence collection during incidents
+- Inability to isolate compromised resources automatically
+- No automated threat intelligence integration
+- Reactive vs proactive security posture
 
 ---
 ## 🏗️ Architecture
