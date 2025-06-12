@@ -34,7 +34,7 @@
 - GuardDuty: Threat intelligence and anomaly detection
 - CloudWatch: Executive security dashboards and alerting
 
-![Architecture Diagram](images/securitycompliancediagram.png)
+![Architecture Diagram](images/Automated Security Operations Center.drawio.png)
 
 ---
 ## 🛠️ How Each Problem was Fixed
