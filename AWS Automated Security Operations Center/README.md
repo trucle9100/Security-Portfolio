@@ -235,6 +235,3 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 ---
 *Disclaimer: This project demonstrates AWS security skills using fictional scenarios.
 No real patient health information (PHI) or client data was used.*
-
-This project demonstrates advanced AWS security engineering skills suitable for Senior Security Engineer, DevSecOps Engineer, or Cloud Security Architect roles. All resources were properly cleaned up and followed AWS security best practices.
-
