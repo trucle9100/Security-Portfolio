@@ -1,4 +1,4 @@
-## 🛡️ Mock Client Profile  
+##  Mock Client Profile  
 **Client**: SecureFinTech Corp (Hypothetical FinTech Startup)
 
 **Simulated Challenge**: Failed PCI audit 
@@ -12,18 +12,18 @@
   - Show Lambda auto-remediation capabilities
 
 ---
-## 🛠️ Test Environment Setup
+##  Test Environment Setup
 - Created intentionally insecure resources:
   - Public S3 bucket
   - Over-permissive IAM role
 - Used Terraform/AWS CLI for reproducibility
 
 ---
-## 🏗️ Architecture
+##  Architecture
 ![Architecture Diagram](images/ComplianceAutomation.png)
 
 ---
-## 🔍 Key Achievements  
+## Key Achievements  
 
 | Risk Finding | Remediation Action | AWS Services | Result |  
 |--------------|--------------------|--------------|--------|  
@@ -33,7 +33,7 @@
 
 ---
 
-## 🛡️ Compliance Monitoring & Mapping
+## Compliance Monitoring & Mapping
 - AWS Security Hub provided centralized visibility
 - CIS benchmarks guided remediation priorities
 
@@ -45,7 +45,7 @@
 
 ---
 
-## 📈 Security Posture Improvement  
+## Security Posture Improvement  
 
 **Before** | **After**  
 ---|---
@@ -53,7 +53,7 @@
 **MTTR**: 72 hours | **MTTR**: 8 minutes  
 **Critical Risks**: 3 | **Critical Risks**: 0  
 
-## 📸 Results
+## Results
 | Scenario | Image |
 |-------------|-------|
 | Non-compliant Configuration | ![Alert](images/ConfigAccess_False.png) |
@@ -62,7 +62,7 @@
 | Dashboard (with errors) | ![Alert](images/CloudWatch_NoErrors.png) |
 
 ---
-## 📘 Lessons Learned
+## Lessons Learned
 - Automation Scales Security
 - Reduced manual compliance checks from 20hrs → 1hr/week
 - Cost-Effective Solutions
