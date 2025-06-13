@@ -16,14 +16,15 @@
 | Incident Response | 4+ hours | Real-time automated detection |  
 | Cost Control | Reactive budgeting | Proactive spending limits | 
 
-Enterprise Security Problems Solved
-1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
-The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
-No consistent security policies across accounts
-Risk of accidental production disruption
-Compliance violations in regulated environments
-Uncontrolled cloud spending across business units
-The Automated Solution:
+## Enterprise Security Problems Solved
+### 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
+  - The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
+    - No consistent security policies across accounts
+    - Risk of accidental production disruption
+    - Compliance violations in regulated environments
+    - Uncontrolled cloud spending across business units
+  - The Automated Solution:
+```bash
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -51,41 +52,45 @@ The Automated Solution:
     }
   ]
 }
-
-2. Fragmented Security Monitoring (Visibility Gap)
-The Problem: Each account had independent logging, making incident investigation impossible
-No centralized audit trail across accounts
-Security events scattered across multiple locations
-Difficult compliance reporting and forensic analysis
-Slow incident response due to data fragmentation
-The Automated Solution:
+```
+### 2. Fragmented Security Monitoring (Visibility Gap)
+  - The Problem: Each account had independent logging, making incident investigation impossible
+    - No centralized audit trail across accounts
+    - Security events scattered across multiple locations
+    - Difficult compliance reporting and forensic analysis
+    - Slow incident response due to data fragmentation
+  - The Automated Solution:
+ ```bash
 # Organization-wide CloudTrail logging to centralized security account
 aws cloudtrail create-trail \
   --name OrganizationAuditTrail \
   --s3-bucket-name org-security-logs-central \
   --is-organization-trail \
   --enable-log-file-validation
-
-3. Inconsistent Threat Detection (Security Blind Spots)
-The Problem: GuardDuty deployed inconsistently across accounts with different configurations
-Missing threat detection in critical accounts
-Inconsistent security baseline across environments
-Manual setup for each new account
-No centralized security dashboard
-The Automated Solution:
+```
+### 3. Inconsistent Threat Detection (Security Blind Spots)
+  - The Problem: GuardDuty deployed inconsistently across accounts with different configurations
+    - Missing threat detection in critical accounts
+    - Inconsistent security baseline across environments
+    - Manual setup for each new account
+    - No centralized security dashboard
+  - The Automated Solution:
+ ```bash
 # Auto-enable GuardDuty for all organization accounts
 aws guardduty update-organization-configuration \
   --detector-id abcd1234 \
   --auto-enable \
   --finding-publishing-frequency FIFTEEN_MINUTES
+```
 
-4. Emergency Access Without Audit Trail (Compliance Risk)
-The Problem: No documented procedure for emergency access during security incidents
-SCPs could block legitimate emergency actions
-No auditable break-glass access method
-Risk of policy violations during critical incidents
-Compliance concerns with emergency access
-The Automated Solution:
+### 4. Emergency Access Without Audit Trail (Compliance Risk)
+  - The Problem: No documented procedure for emergency access during security incidents
+    - SCPs could block legitimate emergency actions
+    - No auditable break-glass access method
+    - Risk of policy violations during critical incidents
+    - Compliance concerns with emergency access
+  - The Automated Solution:
+ ```bash
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -102,7 +107,10 @@ The Automated Solution:
     }
   ]
 }
+```
 
+## The Multi-Account Governance Architecture
+*Organizational Structure*
 
 ## The Multi-Account Governance Architecture
 *Organizational Structure*
@@ -115,15 +123,17 @@ The Automated Solution:
 - Development OU
   - Development-Sandbox (Flexible with guardrails)
 
-Policy Inheritance Model
-Organization Level: Global policies for all accounts
-OU Level: Environment-specific controls (Production vs Development)
-Account Level: Individual account exceptions (rare)
-Security Control Layers
-Preventive Controls: Service Control Policies block actions before they occur
-Detective Controls: CloudTrail + GuardDuty monitor all activity
-Responsive Controls: Break-glass procedures for emergencies
-Cost Controls: Budget alerts and spending limits
+
+**Policy Inheritance Model**
+  - Organization Level: Global policies for all accounts
+  - OU Level: Environment-specific controls (Production vs Development)
+  - Account Level: Individual account exceptions (rare)
+
+**Security Control Layers**
+  1. Preventive Controls: Service Control Policies block actions before they occur
+  2. Detective Controls: CloudTrail + GuardDuty monitor all activity
+  3. Responsive Controls: Break-glass procedures for emergencies
+  4. Cost Controls: Budget alerts and spending limits
 
 ---
 ## Technical Implementation Details
@@ -170,11 +180,11 @@ aws guardduty update-organization-configuration \
 ```bash
 # Test 1: Prohibited region access (SHOULD FAIL)
 aws ec2 describe-instances --region eu-west-1
-# Result: AccessDenied - SCP blocking correctly ✅
+# Result: AccessDenied - SCP blocking correctly 
 
 # Test 2: Expensive instance launch (SHOULD FAIL)  
 aws ec2 run-instances --instance-type m5.xlarge --image-id ami-xxx
-# Result: AccessDenied - Cost controls working ✅
+# Result: AccessDenied - Cost controls working 
 
 # Test 3: Allowed actions (SHOULD SUCCEED)
 aws ec2 run-instances --instance-type t3.micro --image-id ami-xxx
