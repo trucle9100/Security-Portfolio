@@ -35,10 +35,18 @@
 - Cost Controls: Automated budget alerts and spending restrictions
 
 ---
-## How Each Problem was Fixed
+## Key Implementation Examples
 
 #### 1. Centralized Account Management
 *Organization Structure:*
+Root
+├── Master Account (billing & governance)
+├── Security OU
+│   └── Security-Central (logging & monitoring)
+├── Production OU
+│   └── Production-Workloads (live applications)
+└── Development OU
+    └── Development-Sandbox (testing & development)
 - Root
     - Master Account (billing & governance)
     - Security OU
@@ -80,45 +88,6 @@
 }
 ```
 
-#### 3. Centralized Security Monitoring
-```bash
-# Organization-wide CloudTrail
-aws cloudtrail create-trail \
-    --name OrganizationAuditTrail \
-    --s3-bucket-name org-security-logs-12345 \
-    --is-organization-trail \
-    --enable-log-file-validation
-```
-
-#### 4. Automated Threat Detection
-```
-# GuardDuty across all accounts
-aws guardduty create-members \
-    --detector-id abcd1234 \
-    --account-details AccountId=111111111111,Email=security@company.com
-```
-
-#### 5. Emergency Access Controls
-```bash
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::MASTER:user/security-admin"
-      },
-      "Action": "sts:AssumeRole",
-      "Condition": {
-        "Bool": {
-          "aws:MultiFactorAuthPresent": "true"
-        }
-      }
-    }
-  ]
-}
-```
-
 ---
 ## Results
 
@@ -129,8 +98,6 @@ aws guardduty create-members \
 | Unauthorized Region Usage | 25% accounts | 0% accounts | 100% compliance |  
 | Expensive Instance Launches | 15/week | 0/week | 100% prevention |  
 | Security Monitoring Coverage | 30% accounts | 100% accounts | 3.3x improvement |  
-| Emergency Access Response | 4 hours | 15 minutes | 94% faster |  
-| Cost Overrun Incidents | 8/month | 1/month | 87% reduction | 
 
 ---
 ## Enterprise Security Controls
@@ -194,29 +161,6 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 - Automated threat detection across account boundaries
 - Policy-as-code for governance automation
 - Executive reporting and security dashboards
-
-**Compliance & Audit**
-- Centralized audit trail collection
-- Automated evidence gathering for compliance
-- Security baseline standardization
-- Risk assessment and mitigation strategies
-
----
-## Key Technologies Used
-**AWS Governance Services:**
-- Organizations, IAM, CloudTrail, GuardDuty, Config
-- Budgets, Cost Explorer, CloudWatch
-
-**Security Frameworks:**
-- NIST Cybersecurity Framework
-- CIS AWS Foundations Benchmark
-- SOC2 Type II compliance controls
-- Well-Architected Security Pillar
-
-**Infrastructure as Code:**
-- AWS CLI for automation
-- JSON for policy definitions
-- CloudFormation for repeatable deployments
 
 ---
 ## What to Add in Production
