@@ -124,6 +124,7 @@ Root Organization
   - Organization Level: Global policies for all accounts
   - OU Level: Environment-specific controls (Production vs Development)
   - Account Level: Individual account exceptions (rare)
+
 **Security Control Layers**
   1. Preventive Controls: Service Control Policies block actions before they occur
   2. Detective Controls: CloudTrail + GuardDuty monitor all activity
