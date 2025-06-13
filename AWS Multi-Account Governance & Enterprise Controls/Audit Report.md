@@ -255,4 +255,4 @@ aws configservice put-organization-config-rule --organization-config-rule-name x
 - Approval Workflow: CISO approval required for break-glass activation
 
 ---
-*Disclosure: This audit report demonstrates advanced AWS multi-account governance skills essential for enterprise cloud architect and security engineering roles. The implementation showcases ability to design and deploy security controls that scale across hundreds of accounts while maintaining business agility. No production data was involved.*
+*Disclosure: This audit report demonstrates advanced AWS multi-account governance skills essential for enterprise cloud architect and security engineering roles. The implementation showcases ability to design and deploy security controls that scale across hundreds of accounts while maintaining business agility. No production data was involved here.*
