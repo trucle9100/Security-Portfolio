@@ -17,7 +17,7 @@
 | Cost Control | Reactive budgeting | Proactive spending limits | 
 
 ## Enterprise Security Problems Solved
-1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
+# 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
   - The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
     - No consistent security policies across accounts
     - Risk of accidental production disruption
@@ -53,7 +53,7 @@
   ]
 }
 ```
-2. Fragmented Security Monitoring (Visibility Gap)
+# 2. Fragmented Security Monitoring (Visibility Gap)
   - The Problem: Each account had independent logging, making incident investigation impossible
     - No centralized audit trail across accounts
     - Security events scattered across multiple locations
@@ -68,7 +68,7 @@ aws cloudtrail create-trail \
   --is-organization-trail \
   --enable-log-file-validation
 ```
-3. Inconsistent Threat Detection (Security Blind Spots)
+# 3. Inconsistent Threat Detection (Security Blind Spots)
   - The Problem: GuardDuty deployed inconsistently across accounts with different configurations
     - Missing threat detection in critical accounts
     - Inconsistent security baseline across environments
@@ -83,13 +83,14 @@ aws guardduty update-organization-configuration \
   --finding-publishing-frequency FIFTEEN_MINUTES
 ```
 
-4. Emergency Access Without Audit Trail (Compliance Risk)
-The Problem: No documented procedure for emergency access during security incidents
-SCPs could block legitimate emergency actions
-No auditable break-glass access method
-Risk of policy violations during critical incidents
-Compliance concerns with emergency access
-The Automated Solution:
+# 4. Emergency Access Without Audit Trail (Compliance Risk)
+  - The Problem: No documented procedure for emergency access during security incidents
+    - SCPs could block legitimate emergency actions
+    - No auditable break-glass access method
+    - Risk of policy violations during critical incidents
+    - Compliance concerns with emergency access
+  - The Automated Solution:
+ ```bash
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -106,9 +107,9 @@ The Automated Solution:
     }
   ]
 }
+```
 
-
-The Multi-Account Governance Architecture
+## The Multi-Account Governance Architecture
 Organizational Structure
 Root Organization
 ├── Master Account (Billing & Organizations Management)
@@ -119,15 +120,15 @@ Root Organization
 └── Development OU
     └── Development-Sandbox (Flexible with guardrails)
 
-Policy Inheritance Model
-Organization Level: Global policies for all accounts
-OU Level: Environment-specific controls (Production vs Development)
-Account Level: Individual account exceptions (rare)
-Security Control Layers
-Preventive Controls: Service Control Policies block actions before they occur
-Detective Controls: CloudTrail + GuardDuty monitor all activity
-Responsive Controls: Break-glass procedures for emergencies
-Cost Controls: Budget alerts and spending limits
+# Policy Inheritance Model
+  - Organization Level: Global policies for all accounts
+  - OU Level: Environment-specific controls (Production vs Development)
+  - Account Level: Individual account exceptions (rare)
+# Security Control Layers
+  1. Preventive Controls: Service Control Policies block actions before they occur
+  2. Detective Controls: CloudTrail + GuardDuty monitor all activity
+  3. Responsive Controls: Break-glass procedures for emergencies
+  4. Cost Controls: Budget alerts and spending limits
 
 Technical Implementation Details
 Service Control Policy (SCP) Architecture
