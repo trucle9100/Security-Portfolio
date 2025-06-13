@@ -16,14 +16,15 @@
 | Incident Response | 4+ hours | Real-time automated detection |  
 | Cost Control | Reactive budgeting | Proactive spending limits | 
 
-Enterprise Security Problems Solved TESTTTTTTTTTTTTTTTTTTTT
+## Enterprise Security Problems Solved
 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
-The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
-No consistent security policies across accounts
-Risk of accidental production disruption
-Compliance violations in regulated environments
-Uncontrolled cloud spending across business units
-The Automated Solution:
+  - The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
+    - No consistent security policies across accounts
+    - Risk of accidental production disruption
+    - Compliance violations in regulated environments
+    - Uncontrolled cloud spending across business units
+  - The Automated Solution:
+```bash
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -51,33 +52,36 @@ The Automated Solution:
     }
   ]
 }
-
+```
 2. Fragmented Security Monitoring (Visibility Gap)
-The Problem: Each account had independent logging, making incident investigation impossible
-No centralized audit trail across accounts
-Security events scattered across multiple locations
-Difficult compliance reporting and forensic analysis
-Slow incident response due to data fragmentation
-The Automated Solution:
+  - The Problem: Each account had independent logging, making incident investigation impossible
+    - No centralized audit trail across accounts
+    - Security events scattered across multiple locations
+    - Difficult compliance reporting and forensic analysis
+    - Slow incident response due to data fragmentation
+  - The Automated Solution:
+ ```bash
 # Organization-wide CloudTrail logging to centralized security account
 aws cloudtrail create-trail \
   --name OrganizationAuditTrail \
   --s3-bucket-name org-security-logs-central \
   --is-organization-trail \
   --enable-log-file-validation
-
+```
 3. Inconsistent Threat Detection (Security Blind Spots)
-The Problem: GuardDuty deployed inconsistently across accounts with different configurations
-Missing threat detection in critical accounts
-Inconsistent security baseline across environments
-Manual setup for each new account
-No centralized security dashboard
-The Automated Solution:
+  - The Problem: GuardDuty deployed inconsistently across accounts with different configurations
+    - Missing threat detection in critical accounts
+    - Inconsistent security baseline across environments
+    - Manual setup for each new account
+    - No centralized security dashboard
+  - The Automated Solution:
+ ```bash
 # Auto-enable GuardDuty for all organization accounts
 aws guardduty update-organization-configuration \
   --detector-id abcd1234 \
   --auto-enable \
   --finding-publishing-frequency FIFTEEN_MINUTES
+```
 
 4. Emergency Access Without Audit Trail (Compliance Risk)
 The Problem: No documented procedure for emergency access during security incidents
