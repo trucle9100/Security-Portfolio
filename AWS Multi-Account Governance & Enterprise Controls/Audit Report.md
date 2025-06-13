@@ -6,6 +6,7 @@
 - What Was Built: Enterprise-grade multi-account governance framework using AWS Organizations, Service Control Policies, and centralized security monitoring that automatically prevents risky actions across all accounts.
 - Business Impact: Achieved preventive security controls that block 100% of policy violations before they occur, centralized audit logging across all accounts, and automated threat detection organization-wide.
 
+---
 ## Key Results
 | Governance Area | Before Implementation | After Implementation |  
 |--------|----------------|-----------------|  
@@ -16,6 +17,7 @@
 | Incident Response | 4+ hours | Real-time automated detection |  
 | Cost Control | Reactive budgeting | Proactive spending limits | 
 
+---
 ## Enterprise Security Problems Solved
 ### 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
   - The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
@@ -109,9 +111,7 @@ aws guardduty update-organization-configuration \
 }
 ```
 
-## The Multi-Account Governance Architecture
-*Organizational Structure*
-
+---
 ## The Multi-Account Governance Architecture
 *Organizational Structure*
 - Root Organization
