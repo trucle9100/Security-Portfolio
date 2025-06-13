@@ -1,29 +1,20 @@
-AWS Lab 9: Multi-Account Governance & Enterprise Controls - Audit Report
+# Multi-Account Governance & Enterprise Controls - Audit Report
+---
 
-Executive Summary
-The Challenge: Enterprise organizations struggle with securing hundreds of AWS accounts while maintaining business agility. Manual governance processes fail at scale, leading to security breaches and compliance violations.
-What Was Built: Enterprise-grade multi-account governance framework using AWS Organizations, Service Control Policies, and centralized security monitoring that automatically prevents risky actions across all accounts.
-Business Impact: Achieved preventive security controls that block 100% of policy violations before they occur, centralized audit logging across all accounts, and automated threat detection organization-wide.
-Key Results
-Governance Area
-Before Implementation
-After Implementation
-Policy Enforcement
-Manual, inconsistent
-100% automated prevention
-Security Monitoring
-Per-account silos
-Centralized across all accounts
-Compliance Tracking
-60% visibility
-100% organization-wide
-Incident Response
-4+ hours
-Real-time automated detection
-Cost Control
-Reactive budgeting
-Proactive spending limits
+## Executive Summary
+- The Challenge: Enterprise organizations struggle with securing hundreds of AWS accounts while maintaining business agility. Manual governance processes fail at scale, leading to security breaches and compliance violations.
+- What Was Built: Enterprise-grade multi-account governance framework using AWS Organizations, Service Control Policies, and centralized security monitoring that automatically prevents risky actions across all accounts.
+- Business Impact: Achieved preventive security controls that block 100% of policy violations before they occur, centralized audit logging across all accounts, and automated threat detection organization-wide.
 
+## Key Results
+| Governance Area | Before Implementation | After Implementation |  
+|--------|----------------|-----------------|  
+| Policy Enforcement | Manual, inconsistent | 100% automated prevention |  
+| Security Monitoring | Per-account silos | Centralized across all accounts |  
+| Compliance Tracking | 60% visibility | 100% organization-wide |  
+| Compliance Tracking | 60% visibility | 100% organization-wide |  
+| Incident Response | 4+ hours | Real-time automated detection |  
+| Cost Control | Reactive budgeting | Proactive spending limits | 
 
 Enterprise Security Problems Solved
 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
