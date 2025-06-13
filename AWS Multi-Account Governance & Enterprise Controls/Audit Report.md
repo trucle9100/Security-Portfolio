@@ -110,7 +110,7 @@ aws guardduty update-organization-configuration \
 ```
 
 ## The Multi-Account Governance Architecture
-Organizational Structure
+*Organizational Structure*
 Root Organization
 ├── Master Account (Billing & Organizations Management)
 ├── Security OU
@@ -120,11 +120,11 @@ Root Organization
 └── Development OU
     └── Development-Sandbox (Flexible with guardrails)
 
-# Policy Inheritance Model
+**Policy Inheritance Model**
   - Organization Level: Global policies for all accounts
   - OU Level: Environment-specific controls (Production vs Development)
   - Account Level: Individual account exceptions (rare)
-# Security Control Layers
+**Security Control Layers**
   1. Preventive Controls: Service Control Policies block actions before they occur
   2. Detective Controls: CloudTrail + GuardDuty monitor all activity
   3. Responsive Controls: Break-glass procedures for emergencies
