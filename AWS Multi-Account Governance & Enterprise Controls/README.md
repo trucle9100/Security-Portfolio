@@ -191,4 +191,4 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 - Key Takeaway: AWS Organizations + SCPs provide enterprise-scale governance that prevents issues before they occur, while centralized monitoring ensures complete visibility across all accounts
 
 ---
-*Disclaimer: This project demonstrates enterprise AWS security skills using realistic scenarios. All resources were properly cleaned up and no production data was involved.*  
+*Disclaimer: This project demonstrates enterprise AWS security skills using realistic scenarios. All resources were properly cleaned up and no production data was involved here.*  
