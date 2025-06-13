@@ -1,4 +1,4 @@
-## 🛡️ What Was Built 
+## What Was Built 
 **The Challenge**: GlobalTech had only 42% security compliance and failed their SOC2 audit
 
 **Solution**: Built enterprise security foundation achieving 80% compliance in 4 hours
@@ -6,7 +6,7 @@
 **Business Impact**:  Saved $20k annually and reduced audit prep from 3 weeks to 2 days
 
 ---
-## 🔍 The Problem Solved
+## The Problem Solved
 - Public S3 buckets exposing company data
 - EC2 servers vulnerable to credential theft
 - No encryption on storage volumes
@@ -17,7 +17,7 @@
 - Failed SOC2 compliance audit
 
 ---
-## 🏗️ Architecture
+## Architecture
 **Single-Account Pattern (Enterprise Standard)**
 - Main Security Account:
   - Production → Secure cross-account roles
@@ -34,7 +34,7 @@
 ![Architecture Diagram](images/securitycompliancediagram.png)
 
 ---
-## 🛠️ How Each Problem was Fixed
+## How Each Problem was Fixed
 
 1. Secured Public S3 Buckets
 ```bash
@@ -77,7 +77,7 @@ aws sts assume-role \
 
 ---
 
-## 📊 Results
+## Results
 | What Was Measured | Before | After | Improvement |  
 |--------------|--------------------|--------------|--------|  
 | Security Hub Score | 30% | 80% | +50 points |  
@@ -88,7 +88,7 @@ aws sts assume-role \
 
 ---
 
-## 🚨 Real-Time Monitoring 
+## Real-Time Monitoring 
 
 **Automated Security Alerts** 
 - What Triggers: Non-compliant resources created
@@ -107,7 +107,7 @@ aws ec2 create-volume --size 8 --availability-zone us-east-1a  # Unencrypted (sh
 aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 ```
 
-## 💰 Business Value Delivered
+## Business Value Delivered
 
 **Cost Savings:**
 - $20k/year: Eliminated third-party security tools
@@ -121,7 +121,7 @@ aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 
 
 ---
-## 🎯 Advanced Skills Demonstrated
+## Advanced Skills Demonstrated
 - Enterprise Security Architecture
   - Cross-account IAM role patterns (single-account implementation)
   - Enterprise IAM patterns within single account
@@ -141,7 +141,7 @@ aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 
 
 ---
-## 🔧 Key Technologies Used
+## Key Technologies Used
 **AWS Security Services:**
 - Security Hub, Config, IAM, CloudWatch
 - S3, EC2, SNS, STS
@@ -158,7 +158,7 @@ aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 
 ---
 
-## 📈 What to Add in Production
+## What to Add in Production
 1. AWS Organizations → Real multi-account with SCPs
 2. GuardDuty → Runtime threat detection
 3. CloudTrail → Complete API logging
@@ -167,7 +167,7 @@ aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 
 ---
 
-## 📸 Evidence
+## Evidence
 | What Was Built | Screenshot |  
 |--------------|--------------------|  
 | Security Hub Dashboard | ![Dashboard](images/SecurityHubBefore.jpg) | 
@@ -177,7 +177,7 @@ aws s3 mb s3://test-public-$(date +%s)  # Public bucket (should be blocked)
 
 ---
 
-## 🏆 Project Summary
+## Project Summary
 - Problem: Failed security audit, 8 critical issues, manual processes
 - Solution: Enterprise security foundation with automated monitoring
 - Result: Better compliance, lower cost, fast response time

@@ -3,7 +3,7 @@
 
 ---
 
-## 🛡️ Mock Client Profile  
+## Mock Client Profile  
 **Client**: TestClient HealthTech  
 
 **Simulated Challenge**:  
@@ -18,18 +18,18 @@ Implement automated compliance monitoring for:
 ✅ Executive dashboard with compliance trends  
 
 ---
-## 🛠️ Test Environment Setup  
+## Test Environment Setup  
 - Created intentionally non-compliant resources:  
   - Unencrypted EBS volumes (`testclient-phi-storage`)  
   - Disabled Config logging  
 - Used AWS CLI + Console for scenario realism  
 
 ---
-## 🏗️ Architecture  
+## Architecture  
 ![Compliance Monitoring Flow](images/Monitoring_Automation.png)  
 
 ---
-## 🔍 Key Achievements  
+## Key Achievements  
 
 | Risk Finding | Remediation Action | AWS Services | Result |  
 |--------------|--------------------|--------------|--------|  
@@ -38,7 +38,7 @@ Implement automated compliance monitoring for:
 | Delayed Alerts | EventBridge automation | EventBridge | 8-min alert time |  
 
 ---
-## 🛡️ Compliance Monitoring & Mapping  
+## Compliance Monitoring & Mapping  
 | AWS Service | Security Control | Compliance Standard |  
 |-------------|------------------|---------------------|  
 | Config | Continuous Monitoring | HIPAA §164.312(b), NIST SI-4 |  
@@ -46,7 +46,7 @@ Implement automated compliance monitoring for:
 | SNS | Incident Response | NIST IR-4 |  
 
 ---
-## 📈 Security Posture Improvement  
+## Security Posture Improvement  
 
 **Before** | **After**  
 ---|---
@@ -55,7 +55,7 @@ Implement automated compliance monitoring for:
 **Undetected Risks**: 12 | **Undetected Risks**: 0  
 
 ---
-## 📸 Results  
+## Results  
 | Scenario | Image |  
 |----------|-------|  
 | Non-Compliant EBS Volume | ![Config Finding](images/Noncompliant_Resources.png) |  
@@ -65,7 +65,7 @@ Implement automated compliance monitoring for:
 | Config Rule Detail | ![Rule](images/ConfigRuleDetail.png) |
 
 ---
-## 📘 Lessons Learned  
+## Lessons Learned  
 1. **Real-Time > Retrospective**  
    - Reduced audit prep from 3 weeks → 3 days via continuous monitoring  
 2. **Visibility = Accountability**  

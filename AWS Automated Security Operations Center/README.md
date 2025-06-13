@@ -1,6 +1,6 @@
 #  AWS Automated Security Operations & Incident Response
 
-## 🛡️ What Was Built 
+## What Was Built 
 **The Challenge**: Enterprise needed automated security operations to reduce incident response time from hours to minutes
 
 **Solution**: Built comprehensive Security Operations Center (SOC) with automated threat detection, response, and compliance monitoring
@@ -8,7 +8,7 @@
 **Business Impact**: Achieved 95% automated remediation rate and reduced security incident response time by 90%
 
 ---
-## 🔍 The Problem Solved
+## The Problem Solved
 - Manual security incident response taking 2-4 hours
 - No automated compliance monitoring
 - Security violations going undetected for days
@@ -19,7 +19,7 @@
 - Reactive vs proactive security posture
 
 ---
-## 🏗️ Architecture
+## Architecture
 **Event-Driven Security Automation Pattern**
 - Detection Layer: Config Rules + GuardDuty findings
 - Processing Layer: EventBridge routing + Lambda remediation
@@ -37,7 +37,7 @@
 ![Architecture Diagram](images/AutomatedSecurityOperation.png)
 
 ---
-## 🛠️ How Each Problem was Fixed
+## How Each Problem was Fixed
 1. Automated Security Group Remediation
 ```bash
 def remediate_security_group(sg_id):
@@ -100,7 +100,7 @@ def quarantine_ec2_instance(instance_id):
 
 ---
 
-## 📊 Results
+## Results
 | What Was Measured | Before | After | Improvement |  
 |--------------|--------------------|--------------|--------|  
 | Incident Response Time | 2-4hours | 5 minutes | 95% faster |  
@@ -113,7 +113,7 @@ def quarantine_ec2_instance(instance_id):
 
 ---
 
-## 🚨 Real-Time Monitoring 
+## Real-Time Monitoring 
 
 **Automated Detection & Response**
 - What Triggers: Config rule violations, GuardDuty findings, security group changes
@@ -136,7 +136,7 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 
 ---
 
-## 💰 Business Value Delivered
+## Business Value Delivered
 **Operational Efficiency:**
 - 95% reduction in manual security tasks
 - 90% faster incident response time
@@ -156,7 +156,7 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 
 ---
 
-## 🎯 Advanced Skills Demonstrated
+## Advanced Skills Demonstrated
 **Security Automation Architecture**
 - Event-driven security response patterns
 - Serverless security function design
@@ -184,7 +184,7 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 
 ---
 
-## 🔧 Key Technologies Used
+## Key Technologies Used
 **AWS Security Services:**
 - Config, GuardDuty, EventBridge, Lambda, Step Functions
 - CloudWatch, SNS, IAM, CloudTrail
@@ -203,7 +203,7 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 
 ---
 
-## 📈 What to Add in Production
+## What to Add in Production
 1. AWS Organizations → Multi-account security with SCPs
 2. Security Lake → Centralized security data analytics
 3. Inspector → Automated vulnerability scanning
@@ -214,7 +214,7 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 
 ---
 
-## 📸 Evidence
+## Evidence
 | What Was Built | Screenshot |
 |--------------|--------------------|
 | Security Operations Dashboard | ![Capture](images/CloudWatchPhase5.jpg) |
@@ -226,7 +226,7 @@ aws s3api put-bucket-acl --bucket test-bucket --acl public-read
 
 ---
 
-## 🏆 Project Summary
+## Project Summary
 - Problem: Manual security operations with slow incident response
 - Solution: End-to-end automated security operations platform
 - Result: 95% automation rate, 90% faster response, 24/7 monitoring
