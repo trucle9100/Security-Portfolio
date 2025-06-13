@@ -1,44 +1,52 @@
-AWS Multi-Account Governance & Enterprise Controls
-🏢 What Was Built
-The Challenge: Fortune 500 company needed enterprise-scale AWS governance to prevent security breaches while enabling business agility across 100+ AWS accounts
-Solution: Architected comprehensive multi-account governance framework using AWS Organizations with automated security controls and centralized monitoring
-Business Impact: Prevented security incidents through automated guardrails, reduced compliance audit time by 80%, and enabled secure self-service for development teams
+# AWS Multi-Account Governance & Enterprise Controls
 
-🔍 The Problem Solved
-No centralized control over AWS account creation and management
-Security violations occurring across isolated accounts
-Developers launching expensive resources without oversight
-Lack of organization-wide audit trails for compliance
-Manual security monitoring across multiple accounts
-No standardized security baselines across environments
-Emergency access procedures bypassing security controls
-Cost overruns from uncontrolled resource provisioning
+## What Was Built
 
-🏗️ Architecture
-Multi-Account Security Governance Pattern
-Organization Layer: AWS Organizations with hierarchical OUs
-Policy Layer: Service Control Policies (SCPs) for preventive controls
-Monitoring Layer: Centralized CloudTrail + GuardDuty
-Response Layer: Break-glass procedures with audit trails
-Core Components Implemented
-AWS Organizations: 4-account structure with environment-based OUs
-Service Control Policies: Automated security guardrails and cost controls
-CloudTrail: Organization-wide audit logging to central security account
-GuardDuty: AI-powered threat detection across all accounts
-Cost Controls: Automated budget alerts and spending restrictions
+**The Challenge**: Fortune 500 company needed enterprise-scale AWS governance to prevent security breaches while enabling business agility across 100+ AWS accounts
+
+**Solution**: Architected comprehensive multi-account governance framework using AWS Organizations with automated security controls and centralized monitoring
+
+**Business Impact**: Prevented security incidents through automated guardrails, reduced compliance audit time by 80%, and enabled secure self-service for development teams
+
+---
+## The Problem Solved
+- No centralized control over AWS account creation and management
+- Security violations occurring across isolated accounts
+- Developers launching expensive resources without oversight
+- Lack of organization-wide audit trails for compliance
+- Manual security monitoring across multiple accounts
+- No standardized security baselines across environments
+- Emergency access procedures bypassing security controls
+- Cost overruns from uncontrolled resource provisioning
+
+## Architecture
+**Multi-Account Security Governance Pattern**
+- Organization Layer: AWS Organizations with hierarchical OUs
+- Policy Layer: Service Control Policies (SCPs) for preventive controls
+- Monitoring Layer: Centralized CloudTrail + GuardDuty
+- Response Layer: Break-glass procedures with audit trails
+
+**Core Components Implemented**
+- AWS Organizations: 4-account structure with environment-based OUs
+- Service Control Policies: Automated security guardrails and cost controls
+- CloudTrail: Organization-wide audit logging to central security account
+- GuardDuty: AI-powered threat detection across all accounts
+- Cost Controls: Automated budget alerts and spending restrictions
 
 
-🛠️ How Each Problem was Fixed
-1. Centralized Account Management
-Organization Structure:
-Root
-├── Master Account (billing & governance)
-├── Security OU
-│   └── Security-Central (logging & monitoring)
-├── Production OU
-│   └── Production-Workloads (live applications)
-└── Development OU
-    └── Development-Sandbox (testing & development)
+## How Each Problem was Fixed
+
+#### 1. Centralized Account Management
+**Organization Structure:**
+- Root
+    - Master Account (billing & governance)
+    - Security OU
+        - Security-Central (logging & monitoring)
+    - Production OU
+        - Production-Workloads (live applications)
+    - Development OU
+        - Development-Sandbox (testing & development)
+
 
 2. Automated Security Guardrails
 {
