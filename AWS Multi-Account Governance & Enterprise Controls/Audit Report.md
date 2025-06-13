@@ -111,6 +111,7 @@ aws guardduty update-organization-configuration \
 
 ## The Multi-Account Governance Architecture
 *Organizational Structure*
+
 Root Organization
 ├── Master Account (Billing & Organizations Management)
 ├── Security OU
