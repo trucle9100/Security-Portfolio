@@ -17,7 +17,7 @@
 | Cost Control | Reactive budgeting | Proactive spending limits | 
 
 ## Enterprise Security Problems Solved
-# 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
+### 1. Uncontrolled Multi-Account Access (Critical Infrastructure Risk)
   - The Problem: Developers with admin access could launch expensive resources or operate in prohibited regions
     - No consistent security policies across accounts
     - Risk of accidental production disruption
@@ -53,7 +53,7 @@
   ]
 }
 ```
-# 2. Fragmented Security Monitoring (Visibility Gap)
+### 2. Fragmented Security Monitoring (Visibility Gap)
   - The Problem: Each account had independent logging, making incident investigation impossible
     - No centralized audit trail across accounts
     - Security events scattered across multiple locations
@@ -68,7 +68,7 @@ aws cloudtrail create-trail \
   --is-organization-trail \
   --enable-log-file-validation
 ```
-# 3. Inconsistent Threat Detection (Security Blind Spots)
+### 3. Inconsistent Threat Detection (Security Blind Spots)
   - The Problem: GuardDuty deployed inconsistently across accounts with different configurations
     - Missing threat detection in critical accounts
     - Inconsistent security baseline across environments
@@ -83,7 +83,7 @@ aws guardduty update-organization-configuration \
   --finding-publishing-frequency FIFTEEN_MINUTES
 ```
 
-# 4. Emergency Access Without Audit Trail (Compliance Risk)
+### 4. Emergency Access Without Audit Trail (Compliance Risk)
   - The Problem: No documented procedure for emergency access during security incidents
     - SCPs could block legitimate emergency actions
     - No auditable break-glass access method
