@@ -33,6 +33,10 @@ PHI Compliance Monitor
 - **Encrypted SNS**: HIPAA-compliant notification delivery
 - **CloudWatch Dashboard**: Executive visibility with compliance metrics
 
+**Diagram:**
+
+![Compliance Monitoring Flow](images/Monitoring_Automation.png)  
+
 ---
 
 ## **Key Security Controls Implemented**
