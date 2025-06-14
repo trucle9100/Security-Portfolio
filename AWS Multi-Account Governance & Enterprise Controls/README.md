@@ -34,6 +34,9 @@ Root Organization
 - **GuardDuty**: AI-powered threat detection across all accounts
 - **Cost Controls**: Automated budget alerts and spending limits
 
+Diagram: 
+![Diagram](images/Lab9Diagram.jpg)
+
 ---
 
 ## **Key Security Controls Implemented**
