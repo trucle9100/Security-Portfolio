@@ -30,7 +30,7 @@ CloudWatch → SNS → Real-time Alerts
 - **Step Functions**: Complex incident response workflow orchestration
 - **CloudWatch**: Executive security dashboards and operational metrics
 
-Diagram: Insert Image
+Diagram: AutomatedSecurityOperation.png
 ---
 
 ## **Key Security Automations Implemented**
