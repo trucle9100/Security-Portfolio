@@ -37,6 +37,10 @@ AWS Security Automation Pipeline
 - **EventBridge**: Real-time violation triggers
 - **CloudWatch Dashboard**: Centralized compliance visibility
 
+**Diagram:**
+
+![Architecture Diagram](images/ComplianceAutomation.png)
+
 ---
 
 ## **Key Security Controls Implemented**
