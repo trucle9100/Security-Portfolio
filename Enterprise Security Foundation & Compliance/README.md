@@ -33,7 +33,7 @@ Main Security Account
 
 **Diagram:**
 
-![Architecture Diagram](images/securitycompliancediagram.png)
+![Architecture Diagram](images/securitycompliancediagram2.png)
 
 ---
 
