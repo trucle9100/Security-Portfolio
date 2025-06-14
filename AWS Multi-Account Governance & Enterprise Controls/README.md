@@ -39,14 +39,6 @@
 
 #### 1. Centralized Account Management
 *Organization Structure:*
-Root
-├── Master Account (billing & governance)
-├── Security OU
-│   └── Security-Central (logging & monitoring)
-├── Production OU
-│   └── Production-Workloads (live applications)
-└── Development OU
-    └── Development-Sandbox (testing & development)
 - Root
     - Master Account (billing & governance)
     - Security OU
