@@ -31,7 +31,10 @@ Main Security Account
 - **Permission Boundaries**: Developer privilege containment
 - **CloudWatch**: Real-time compliance metrics
 
-Diagram: ![Diagram](images/AutomatedSecurityOperation.png)
+**Diagram:**
+
+![Architecture Diagram](images/securitycompliancediagram.png)
+
 ---
 
 ## **Security Controls Implemented**
