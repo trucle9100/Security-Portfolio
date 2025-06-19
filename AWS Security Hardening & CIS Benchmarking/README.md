@@ -1,4 +1,4 @@
-# AWS CIS Hardening & Compliance for MedGuard FinTech
+# Financial Services Security Hardening | CIS Compliance & SOC 2 Ready
 *Automated Security Compliance & SOC2 Readiness Implementation*
 
 ---
