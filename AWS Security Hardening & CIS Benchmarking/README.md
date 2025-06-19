@@ -14,6 +14,15 @@
 
 ---
 
+## **Business Value**
+- **Risk Reduction**: Eliminated critical security misconfigurations within minutes
+- **SOC2 Readiness**: 94% compliance score with documented automated controls
+- **Operational Efficiency**: 95% reduction in manual security monitoring
+- **Cost Optimization**: $50K/year saved vs. third-party compliance tools
+
+---
+
+
 ## **Architecture Built**
 
 ```
@@ -126,14 +135,6 @@ aws configservice get-compliance-details-by-config-rule \
 - **Centralized Dashboard**: Aggregated findings from Config, GuardDuty, and Inspector
 - **CIS Controls Mapping**: Direct correlation to CIS benchmark requirements
 - **Compliance Scoring**: Automated SOC2 readiness assessment
-
----
-
-## **Business Value**
-- **Risk Reduction**: Eliminated critical security misconfigurations within minutes
-- **SOC2 Readiness**: 94% compliance score with documented automated controls
-- **Operational Efficiency**: 95% reduction in manual security monitoring
-- **Cost Optimization**: $50K/year saved vs. third-party compliance tools
 
 ---
 
