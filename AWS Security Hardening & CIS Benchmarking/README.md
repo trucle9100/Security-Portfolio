@@ -3,7 +3,24 @@
 
 ---
 
-## **What This Demonstrates**
+## **💼 Business Impact & Results**
+
+| Metric | Before | After | Impact |
+|--------|--------|-------|---------|
+| Compliance Score | 58% | 94% | **+36% improvement** |
+| MTTR (Mean Time to Repair) | 72 hours | 8 minutes | **99% reduction** |
+| Critical Security Findings | 3 | 0 | **100% elimination** |
+| Manual Security Tasks | 20 hrs/week | 1 hr/week | **95% automation** |
+
+**Business Value Delivered:**
+- **Risk Reduction**: Eliminated critical security misconfigurations within minutes
+- **SOC2 Readiness**: 94% compliance score with documented automated controls
+- **Operational Efficiency**: 95% reduction in manual security monitoring
+- **Cost Optimization**: $50K/year saved vs. third-party compliance tools
+
+---
+
+## **🎯 What This Demonstrates**
 **CIS Benchmark Compliance** | **Automated Remediation** | **Security Monitoring** | **SOC2 Preparation**
 
 **The Challenge**: MedGuard FinTech needed automated AWS security hardening to meet SOC2 requirements while maintaining developer agility
@@ -14,16 +31,7 @@
 
 ---
 
-## **Business Value**
-- **Risk Reduction**: Eliminated critical security misconfigurations within minutes
-- **SOC2 Readiness**: 94% compliance score with documented automated controls
-- **Operational Efficiency**: 95% reduction in manual security monitoring
-- **Cost Optimization**: $50K/year saved vs. third-party compliance tools
-
----
-
-
-## **Architecture Built**
+## **🏗️ Architecture Built**
 
 ```
 AWS Security Automation Pipeline
@@ -52,7 +60,18 @@ AWS Security Automation Pipeline
 
 ---
 
-## **Key Security Controls Implemented**
+## **💡 Skills Demonstrated**
+- **AWS Config**: Security rule implementation and compliance monitoring
+- **Lambda Automation**: Event-driven security remediation functions
+- **EventBridge**: Serverless orchestration and event routing
+- **CIS Benchmarks**: Industry-standard security framework implementation
+- **Infrastructure as Code**: Terraform deployment of compliance controls
+- **DevSecOps**: Automated security integration into CI/CD pipelines
+- **Compliance Frameworks**: SOC2, HIPAA, PCI-DSS readiness
+
+---
+
+## **🔧 Key Security Controls Implemented**
 
 ### 1. S3 Auto-Remediation (Lambda Function)
 ```python
@@ -108,18 +127,18 @@ aws configservice get-compliance-details-by-config-rule \
 
 ---
 
-## **Results Achieved**
+## **📊 Results & Validation**
 
-| Metric | Before | After | Impact |
-|--------|--------|-------|---------|
-| Compliance Score | 58% | 94% | **+36% improvement** |
-| MTTR (Mean Time to Repair) | 72 hours | 8 minutes | **99% reduction** |
-| Critical Security Findings | 3 | 0 | **100% elimination** |
-| Manual Security Tasks | 20 hrs/week | 1 hr/week | **95% automation** |
+| Scenario | Image |
+|-------------|-------|
+| Non-compliant Configuration | ![Alert](images/ConfigAccess_False.png) |
+| Dashboard (with errors) | ![Alert](images/CloudWatch_WithErrors.png) |
+| Compliant Configuration | ![Alert](images/ConfigAccess_True.png) |
+| Dashboard (no errors) | ![Alert](images/CloudWatch_NoErrors.png) |
 
 ---
 
-## **Technical Implementation Highlights**
+## **🔍 Technical Implementation Highlights**
 
 ### Continuous Compliance Monitoring
 - **AWS Config Rules**: CIS benchmark v1.4 automated evaluation
@@ -138,26 +157,7 @@ aws configservice get-compliance-details-by-config-rule \
 
 ---
 
-## **Skills Demonstrated**
-- **AWS Config**: Security rule implementation and compliance monitoring
-- **Lambda Automation**: Event-driven security remediation functions
-- **EventBridge**: Serverless orchestration and event routing
-- **CIS Benchmarks**: Industry-standard security framework implementation
-- **Infrastructure as Code**: Terraform deployment of compliance controls
-
----
-
-## Results
-| Scenario | Image |
-|-------------|-------|
-| Non-compliant Configuration | ![Alert](images/ConfigAccess_False.png) |
-| Dashboard (with errors) | ![Alert](images/CloudWatch_WithErrors.png) |
-| Compliant Configuration | ![Alert](images/ConfigAccess_True.png) |
-| Dashboard (with errors) | ![Alert](images/CloudWatch_NoErrors.png) |
-
----
-
-## **Production Enhancements**
+## **🚀 Production Enhancements**
 Next steps for enterprise deployment:
 - **Multi-Account Config**: Organization-wide compliance monitoring
 - **Custom Config Rules**: Business-specific security requirements
