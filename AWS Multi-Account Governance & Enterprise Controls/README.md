@@ -35,7 +35,7 @@ Root Organization
 - **Cost Controls**: Automated budget alerts and spending limits
 
 **Diagram:** 
-![Diagram](images/Lab9Diagram.png)
+![Architecture Diagram](images/MultiAccountGovernaceDiagram.png)
 
 ---
 
