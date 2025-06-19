@@ -1,4 +1,4 @@
-# AWS Automated Security Operations Center
+# 24/7 Automated Security Operations Center | Sub-5-Minute Incident Response
 *Enterprise Security Automation & Incident Response Platform*
 
 ---
