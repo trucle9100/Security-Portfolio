@@ -170,4 +170,5 @@ This project represents a hands-on AWS security laboratory exercise designed to 
 - **Scope**: CIS AWS Foundations Benchmark implementation, demonstrating techniques applicable to broader compliance frameworks
 - **Business Impact**: Cost and time savings represent potential improvements based on industry best practices
 
+---
 *This implementation showcases technical proficiency with AWS security services and enterprise security architecture patterns.*
