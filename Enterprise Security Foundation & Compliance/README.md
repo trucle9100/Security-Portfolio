@@ -1,4 +1,4 @@
-# Enterprise Security Foundation & Compliance
+# Enterprise Security Architecture Foundation | Multi-Framework Compliance
 *AWS Security Architecture & Automated Compliance Implementation*
 
 ---
