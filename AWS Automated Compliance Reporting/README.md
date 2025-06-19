@@ -1,4 +1,4 @@
-# AWS HIPAA Compliance Monitoring Automation
+# Healthcare Compliance Automation | 90% Reduction in Manual Oversight
 *Enterprise Healthcare Security & Serverless Automation*
 
 ---
