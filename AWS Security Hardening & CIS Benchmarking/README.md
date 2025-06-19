@@ -166,4 +166,14 @@ Next steps for enterprise deployment:
 
 ---
 
+## **📋 Lab Environment Disclaimer**
+This project represents a hands-on AWS security laboratory exercise designed to demonstrate enterprise security implementation techniques. Key clarifications:
+- **Metrics**: The "before" and "after" compliance scores represent intentionally insecure baseline conditions created for educational purposes
+- **Environment**: Single AWS account learning environment, not a multi-account production deployment  
+- **Scope**: CIS AWS Foundations Benchmark implementation, demonstrating techniques applicable to broader compliance frameworks
+- **Business Impact**: Cost and time savings represent potential improvements based on industry best practices
+*This implementation showcases technical proficiency with AWS security services and enterprise security architecture patterns.*
+
+---
+
 *This implementation demonstrates automated AWS security compliance using CIS benchmarks and native AWS services. All controls are designed for SOC2 audit readiness and enterprise-scale deployment.*
