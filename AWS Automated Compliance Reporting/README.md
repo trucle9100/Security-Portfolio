@@ -3,7 +3,24 @@
 
 ---
 
-## **What This Demonstrates**
+## **💼 Business Impact & Results**
+
+| Metric | Before | After | Impact |
+|--------|--------|-------|---------|
+| PHI Violations | Undetected | 100% detection | **Complete compliance** |
+| Alert Time | Manual (days) | Automated (8 min) | **99.8% faster** |
+| Audit Preparation | 3 weeks | Real-time dashboard | **95% time savings** |
+| Security Coverage | Manual spot checks | Continuous monitoring | **100% visibility** |
+
+**Business Value Delivered:**
+- **Risk Reduction**: Prevents potential HIPAA violations through automated compliance
+- **HIPAA Readiness**: 100% PHI encryption compliance with documented audit trails
+- **Operational Efficiency**: 95% reduction in manual compliance monitoring
+- **Cost Optimization**: Serverless architecture scales automatically with usage
+
+---
+
+## **🎯 What This Demonstrates**
 **HIPAA Compliance Automation** | **Serverless Security Architecture** | **Real-Time Monitoring** | **Policy-as-Code**
 
 **The Challenge**: TestClient HealthTech needed automated detection of unencrypted EBS volumes storing PHI to prevent HIPAA violations
@@ -14,16 +31,20 @@
 
 ---
 
-## **Architecture Built**
+## **🏗️ Architecture Built**
 
 ```
 PHI Compliance Monitor
-├── AWS Config (continuous resource monitoring)
-├── Custom Config Rule (PHI-tagged volume encryption)
-├── EventBridge (compliance change events)
-├── Lambda (alert processing & enrichment)
-├── SNS (encrypted notifications)
-└── CloudWatch (executive dashboard)
+├── AWS Config (Detection)
+│   ├── encrypted-volumes (PHI-aware)
+│   └── Custom Config Rule (PHI tagging)
+├── EventBridge (Orchestration)
+│   └── Config Rules Compliance Change
+├── Lambda (Alert Processing)
+│   ├── PHI Detection Logic
+│   └── Encrypted SNS Notifications
+└── CloudWatch (Monitoring)
+    └── Executive Dashboard
 ```
 
 **Core Components:**
@@ -33,15 +54,25 @@ PHI Compliance Monitor
 - **Encrypted SNS**: HIPAA-compliant notification delivery
 - **CloudWatch Dashboard**: Executive visibility with compliance metrics
 
-**Diagram:**
+**Architecture Flow:**
 
 ![Compliance Monitoring Flow](images/Monitoring_Automation.png)  
 
 ---
 
-## **Key Security Controls Implemented**
+## **💡 Skills Demonstrated**
+- **Healthcare Compliance**: HIPAA regulations, PHI protection, and regulatory audit requirements
+- **AWS Config**: Custom compliance rules, resource monitoring, and automated evaluation
+- **Serverless Architecture**: Lambda functions, EventBridge automation, and cost-effective scaling
+- **Security Engineering**: End-to-end encryption, least privilege IAM, and audit logging
+- **Event-Driven Systems**: Real-time monitoring, automated alerting, and incident response
+- **Infrastructure as Code**: CLI automation, policy-as-code, and repeatable deployments
 
-### 1. PHI-Aware Compliance Detection
+---
+
+## **🔧 Key Security Controls Implemented**
+
+### 1. PHI-Aware Compliance Detection (Lambda Function)
 ```python
 def lambda_handler(event, context):
     config_item = event['configurationItem']
@@ -64,7 +95,7 @@ def lambda_handler(event, context):
         }
 ```
 
-### 2. Automated Compliance Testing
+### 2. Testing Compliance Automation
 ```bash
 # Test 1: Create non-compliant resource (triggers alert)
 aws ec2 create-volume \
@@ -78,27 +109,40 @@ aws ec2 create-volume \
   --availability-zone us-east-1a \
   --encrypted \
   --tag-specifications 'ResourceType=volume,Tags=[{Key=PHI,Value=true}]'
+
+# Verify Config rule evaluation
+aws configservice start-config-rules-evaluation \
+  --config-rule-names testclient-phi-encryption-rule
 ```
 
-### 3. Encrypted End-to-End Pipeline
-- **KMS Encryption**: Customer-managed keys for all services
-- **Encrypted SNS**: HIPAA-compliant alert delivery
-- **Audit Trails**: Complete CloudTrail logging with data events
+### 3. HIPAA Compliance Validation
+```bash
+# Check PHI encryption compliance
+aws configservice get-compliance-details-by-config-rule \
+  --config-rule-name testclient-phi-encryption-rule
+
+# Verify encrypted SNS alerts
+aws sns list-subscriptions --query 'Subscriptions[?TopicArn==`arn:aws:sns:us-east-1:123456789012:testclient-hipaa-alerts`]'
+
+# Validate CloudTrail audit logging
+aws cloudtrail lookup-events --lookup-attributes AttributeKey=ResourceType,AttributeValue=AWS::EC2::Volume
+```
 
 ---
 
-## **Results Achieved**
+## **📊 Results & Validation**
 
-| Metric | Before | After | Impact |
-|--------|--------|-------|---------|
-| PHI Violations | Undetected | 100% detection | **Complete compliance** |
-| Alert Time | Manual (days) | Automated (8 min) | **99.8% faster** |
-| Audit Preparation | 3 weeks | Real-time dashboard | **95% time savings** |
-| Security Coverage | Manual spot checks | Continuous monitoring | **100% visibility** |
+| Scenario | Implementation Evidence |
+|----------|-------------------------|
+| Non-Compliant Detection | ![Config Finding](images/Noncompliant_Resources.png) |
+| Executive Dashboard | ![Dashboard](images/CloudWatch_Dashboard.png) |
+| Automated Alerting | ![Alert](images/LambdaFunctionTest.png) |
+| Event-Driven Triggers | ![Trigger](images/Lambda_EventBridge_Trigger.png) |
+| Config Rule Details | ![Rule](images/ConfigRuleDetail.png) |
 
 ---
 
-## **Technical Implementation Highlights**
+## **🔍 Technical Implementation Highlights**
 
 ### Serverless Security Architecture
 - **Event-Driven**: Real-time compliance evaluation on resource changes
@@ -118,24 +162,7 @@ aws ec2 create-volume \
 
 ---
 
-## **Business Value**
-- **Risk Reduction**: $2M+ potential HIPAA fine avoidance through automated compliance
-- **Operational Efficiency**: 95% reduction in manual compliance monitoring
-- **Audit Readiness**: Continuous compliance evidence for regulatory audits
-- **Cost Optimization**: Serverless architecture scales automatically with usage
-
----
-
-## **Skills Demonstrated**
-- **AWS Config**: Custom rules, compliance monitoring, and resource tracking
-- **Lambda Functions**: Event processing, error handling, and secure notifications
-- **EventBridge**: Event-driven architecture and automated workflows
-- **Healthcare Security**: HIPAA compliance, PHI protection, and audit requirements
-- **Serverless Architecture**: Cost-effective, scalable enterprise security solutions
-
----
-
-## **HIPAA Compliance Mapping**
+## **📋 HIPAA Compliance Mapping**
 
 | AWS Service | HIPAA Requirement | Implementation |
 |-------------|-------------------|----------------|
@@ -146,24 +173,13 @@ aws ec2 create-volume \
 
 ---
 
-## **Production Enhancements**
-Ready for enterprise deployment with:
+## **🚀 Production Enhancements**
+Next steps for enterprise deployment:
 - **AWS Security Hub**: Centralized compliance findings
 - **AWS Systems Manager**: Automated remediation actions
 - **AWS Control Tower**: Multi-account governance
 - **Custom Dashboards**: Executive and operational views
 - **Integration APIs**: SIEM and ticketing system connectivity
-
----
-
-## **Evidence**
-| Scenario | Image |  
-|----------|-------|  
-| Non-Compliant EBS Volume | ![Config Finding](images/Noncompliant_Resources.png) |  
-| CloudWatch Dashboard | ![Dashboard](images/CloudWatch_Dashboard.png) |  
-| Lambda Test Alert | ![Alert](images/LambdaFunctionTest.png) |  
-| Working SNS Email | ![Rule](images/Lambda_EventBridge_Trigger.png) |
-| Config Rule Detail | ![Rule](images/ConfigRuleDetail.png) |
 
 ---
 
