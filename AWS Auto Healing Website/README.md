@@ -44,19 +44,7 @@
 
 ## **🏗️ Architecture Built**
 
-```
-Internet Gateway
-    ↓
-EC2 Instance (Apache Web Server)
-    ↓
-CloudWatch Metrics (CPU Monitoring)
-    ↓
-CloudWatch Alarm (>80% threshold)
-    ↓
-SNS Topic (Alert Notifications)
-    ↓
-Email/Slack Notifications
-```
+![Architecture Diagram](diagram/autohealing_diagram.png)
 
 **Core Components:**
 - **EC2 Instance**: Amazon Linux 2 with Apache web server
@@ -64,10 +52,6 @@ Email/Slack Notifications
 - **SNS Notifications**: Email and Slack alert delivery
 - **IAM Roles**: Service permissions for automated recovery actions
 - **Security Groups**: Controlled access for HTTP and SSH traffic
-
-**Architecture Flow:**
-
-![Architecture Diagram](diagram/autohealing_diagram.png)
 
 ---
 
