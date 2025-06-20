@@ -46,20 +46,13 @@
 
 ## **🏗️ Architecture Built**
 
-```
-AWS Budgets (Threshold) → Lambda Function → SNS Topic → Email Alert
-                      ↓
-                 CloudWatch Logs (Monitoring)
-```
+![Architecture](diagram/CostTracker_Diagram.png)
 
 **Core Components:**
 - **AWS Budgets**: Cost monitoring with configurable thresholds (80%/100%)
 - **Lambda Function**: Event processor for budget alerts with SNS publishing
 - **SNS Topic**: Notification distribution to email subscribers
 - **CloudWatch**: Centralized logging and monitoring for troubleshooting
-
-**Architecture Flow:**
-![Architecture](diagram/CostTracker_Diagram.png)
 
 ---
 

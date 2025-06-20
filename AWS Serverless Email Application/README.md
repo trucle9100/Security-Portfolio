@@ -44,11 +44,7 @@
 
 ## **🏗️ Architecture Built**
 
-```
-Frontend (S3) → API Gateway → Step Functions → Lambda → SES
-                     ↓
-              CloudWatch Monitoring
-```
+![Architecture Diagram](diagram/ServerlessApplication.png)
 
 **Core Components:**
 - **Amazon S3**: Static website hosting with public access configuration
@@ -57,8 +53,6 @@ Frontend (S3) → API Gateway → Step Functions → Lambda → SES
 - **AWS Lambda**: Email processing with SES permissions
 - **Amazon SES**: Verified email delivery service
 
-**Architecture Flow:**
-![Architecture Diagram](diagram/ServerlessApplication.png)
 
 ---
 
