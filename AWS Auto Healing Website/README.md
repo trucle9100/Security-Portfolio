@@ -66,6 +66,7 @@ Email/Slack Notifications
 - **Security Groups**: Controlled access for HTTP and SSH traffic
 
 **Architecture Flow:**
+
 ![Architecture Diagram](diagram/autohealing_diagram.png)
 
 ---
@@ -114,9 +115,6 @@ stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 |-----------|------------|
 | CloudWatch CPU Alarm | ![Alert](images/ThresholdAlarm.png) |
 | SNS Email Alert | ![Alert](images/RecoveryEmail.png) |
-| EC2 Instance Configuration | ![Instance](images/EC2Instance.png) |
-| IAM Role Permissions | ![IAM](images/IAMRole.png) |
-| Stress Test Results | ![Stress](images/StressTest.png) |
 
 ---
 
