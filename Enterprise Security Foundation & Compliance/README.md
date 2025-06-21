@@ -3,7 +3,7 @@
 
 ---
 
-## **💼 Business Impact & Results**
+## Business Impact & Results
 
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
@@ -21,7 +21,7 @@
 
 ---
 
-## **🎯 What This Demonstrates**
+## Project Overview
 **Enterprise Security Architecture** | **Compliance Automation** | **Advanced IAM Patterns** | **Real-Time Monitoring**
 
 **The Challenge**: Organization had 42%<sup>[1](#ref1)</sup> security compliance and manual security processes taking weeks
@@ -32,7 +32,7 @@
 
 ---
 
-## **💡 Skills Demonstrated**
+## Skills Demonstrated
 - **AWS Security Services**: Security Hub, Config, IAM, CloudWatch integration
 - **Enterprise Security**: CIS benchmarks, compliance automation, threat detection
 - **Advanced IAM**: Cross-account roles, permission boundaries, external ID protection
@@ -42,7 +42,7 @@
 
 ---
 
-## **🏗️ Architecture Built**
+## Architecture Built
 
 **Single-Account Enterprise Pattern:**
 ```
@@ -65,7 +65,7 @@ Main Security Account
 
 ---
 
-## **🔧 Key Security Controls Implemented**
+## Key Security Controls Implemented
 
 ### 1. Cross-Account IAM Role with External ID
 ```json
@@ -122,7 +122,7 @@ aws ec2 enable-ebs-encryption-by-default --region us-east-1
 
 ---
 
-## **📊 Implementation Evidence**
+## Implementation Evidence
 
 | What Was Built | Screenshot |  
 |--------------|--------------------|  
@@ -133,7 +133,7 @@ aws ec2 enable-ebs-encryption-by-default --region us-east-1
 
 ---
 
-## **🔍 Technical Implementation Highlights**
+## Technical Implementation Highlights
 
 ### CIS AWS Foundations Benchmark
 - **Preventive Controls**: EBS encryption, S3 public access blocks
@@ -152,7 +152,7 @@ aws ec2 enable-ebs-encryption-by-default --region us-east-1
 
 ---
 
-## **🚀 Production Enhancements**
+## Production Enhancements
 Next steps for enterprise deployment:
 - **AWS Organizations**: Multi-account governance with SCPs
 - **GuardDuty**: AI-powered threat detection
@@ -161,7 +161,7 @@ Next steps for enterprise deployment:
 
 ---
 
-## **📋 Lab Environment Disclaimer**
+## Lab Environment Disclaimer
 
 This project represents a hands-on AWS security laboratory exercise designed to demonstrate enterprise security implementation techniques. Key clarifications:
 
