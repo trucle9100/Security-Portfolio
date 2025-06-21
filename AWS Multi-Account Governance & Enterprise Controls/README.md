@@ -3,7 +3,7 @@
 
 ---
 
-## **Business Impact & Results**
+## Business Impact & Results
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
 | Security Incidents<sup>[1](#ref1)</sup> | 12/month | 0/month | **100% prevention** |
@@ -20,7 +20,7 @@
 
 ---
 
-## **What This Demonstrates**
+## Project Overview
 **Enterprise Security Architecture** | **Multi-Account Governance** | **Policy-as-Code** | **Centralized Monitoring**
 
 **The Challenge**: Enterprise needed AWS governance across multiple accounts to prevent security breaches while enabling developer agility
@@ -31,7 +31,7 @@
 
 ---
 
-## **Skills Demonstrated**
+## Skills Demonstrated
 - **AWS Organizations**: Multi-account architecture and OU design
 - **Service Control Policies**: Policy evaluation, inheritance, and testing
 - **Enterprise Security**: Centralized logging, monitoring, and incident response
@@ -41,7 +41,7 @@
 
 ---
 
-## **Architecture Built**
+## Architecture Built
 
 ```
 Root Organization
@@ -66,7 +66,7 @@ Root Organization
 
 ---
 
-## **Key Security Controls Implemented**
+## Key Security Controls Implemented
 
 ### 1. Automated Policy Enforcement (SCP Example)
 ```json
@@ -136,7 +136,7 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 
 ---
 
-## **Implementation Evidence**
+## Implementation Evidence
 
 | Component | Screenshot |
 |-----------|------------|
@@ -148,7 +148,7 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 
 ---
 
-## **Technical Implementation Highlights**
+## Technical Implementation Highlights
 
 ### Multi-Account Management
 - **Organization Design**: Environment-based OUs for policy inheritance
@@ -168,7 +168,7 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 
 ---
 
-## **Production Enhancements**
+## Production Enhancements
 Next steps for real enterprise deployment:
 - **AWS Control Tower**: Account factory with automated guardrails
 - **AWS SSO**: Centralized identity management
@@ -178,7 +178,7 @@ Next steps for real enterprise deployment:
 
 ---
 
-## **Lab Environment Disclaimer**
+## Lab Environment Disclaimer
 
 This project represents a hands-on AWS multi-account governance laboratory exercise designed to demonstrate enterprise security implementation techniques. Key clarifications:
 
