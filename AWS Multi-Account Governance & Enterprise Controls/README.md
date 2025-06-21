@@ -191,6 +191,8 @@ This project represents a hands-on AWS multi-account governance laboratory exerc
 
 The technical implementation is production-grade and follows AWS Well-Architected security principles, demonstrating real-world enterprise governance patterns.
 
+---
+
 <details>
 <summary><strong>📋 Click to expand baseline methodology and industry benchmarks</strong></summary>
 
