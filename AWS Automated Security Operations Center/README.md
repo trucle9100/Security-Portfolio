@@ -174,7 +174,7 @@ The lab validates technical proficiency with AWS security services and demonstra
 <details>
 <summary><strong>📋 Click to expand baseline methodology and industry context</strong></summary>
 
-### Baseline Metrics Sources - Updated with 2024 Industry Data
+### Baseline Metrics Sources
 
 <a name="ref1"></a>**[1] Configuration Drift Detection (3+ days industry average):**
 - **Industry Context**: In 2024, it took three days on average for the occurrence to discovery of cyber incidents in US companies
