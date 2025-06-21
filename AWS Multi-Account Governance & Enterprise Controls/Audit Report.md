@@ -1,6 +1,6 @@
 # AWS Multi-Account Governance & Enterprise Controls
 **Technical Implementation Guide**
-Duration: 3-4 hours | Cost: ~$5-10
+Duration: 3-4 hours | Cost: ~$5-10<sup>1</sup>
 
 ## Why This Implementation Matters
 - **Enterprise Security at Scale**: Demonstrates multi-account governance patterns used by Fortune 500 companies
@@ -271,6 +271,15 @@ aws guardduty get-master-account --detector-id xxx
 ```
 
 ---
+<details>
+<summary><strong>📋 Click to expand baseline challenges and cost methodology</strong></summary>
+<a name="cost1"></a>[1] Implementation Cost (~$5-10):
+GuardDuty: ~$2-4/month for 4 accounts
+CloudTrail: ~$2-3 for data events and S3 storage
+S3 Storage: ~$1-2 for log retention
+Data Transfer: ~$0.50-1 for cross-account transfers
+
+</details>
 
 **Implementation Completion Time**: ~4 hours
 
