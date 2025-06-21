@@ -166,7 +166,7 @@ This project represents a hands-on AWS healthcare security laboratory exercise d
 <details>
 <summary><strong>📋 Click to expand baseline methodology and healthcare compliance context</strong></summary>
 
-### Baseline Metrics Sources - Updated with 2024 Industry Data
+### Baseline Metrics Sources
 
 <a name="ref1"></a>**[1] PHI Violations (Undetected):**
 - **Source**: Lab environment baseline representing unmanaged healthcare infrastructure
