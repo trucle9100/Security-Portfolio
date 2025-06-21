@@ -81,7 +81,7 @@ Root Organization
       "Resource": "arn:aws:ec2:*:*:instance/*",
       "Condition": {
         "StringNotEquals": {
-          "ec2:InstanceType": ["t3.micro", "t3.small", "t3.medium"]
+          "ec2:InstanceType": ["t3.micro", "t3.small", "t3.medium", "m5.large"]
         }
       }
     },
