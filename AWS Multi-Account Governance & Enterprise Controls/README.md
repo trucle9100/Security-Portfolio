@@ -18,62 +18,7 @@
 - **Compliance Ready**: SOC2, PCI, HIPAA audit preparation with complete audit trails
 - **Developer Velocity**: Self-service environments with built-in guardrails
 
-<details>
-<summary><strong>📋 Click to expand baseline methodology and industry benchmarks</strong></summary>
 
-### Baseline Metrics Sources
-
-<a name="ref1"></a>**[1] Security Incidents (12/month):**
-- **Source**: Estimated based on industry averages for mid-size enterprises
-- **Methodology**: Conservative estimate based on AWS Config non-compliance events and CloudTrail anomalies
-- **Industry Context**: Organizations without centralized governance typically experience 8-15 incidents per month
-- **Calculation**: Based on internal AWS Config compliance reports and security event analysis
-
-<a name="ref2"></a>**[2] Compliance Audit Time (40 hours):**
-- **Source**: Internal audit preparation analysis
-- **Methodology**: Manual evidence collection across multiple AWS accounts
-- **Industry Benchmark**: Estimated 30-50 hours for multi-account manual audit preparation
-- **Calculation**: 4 accounts × 10 hours average manual evidence gathering per account
-
-<a name="ref3"></a>**[3] Unauthorized Resources (15/week):**
-- **Source**: AWS Config compliance reports and resource drift analysis
-- **Methodology**: Resources launched outside approved instance types, regions, or without proper tagging
-- **Industry Context**: Typical pattern of 10-20 non-compliant resources per week in unmanaged environments
-- **Calculation**: Based on developer behavior patterns in sandbox environments before governance implementation
-
-<a name="ref4"></a>**[4] Security Coverage (30% accounts):**
-- **Source**: AWS Security Hub findings and GuardDuty coverage analysis
-- **Methodology**: Percentage of accounts with consistent security monitoring and alerting
-- **Industry Context**: 20-40% coverage typical in decentralized multi-account setups
-- **Calculation**: 1 out of 4 accounts had comprehensive security tooling before implementation
-
-<a name="ref5"></a>**[5] Manual Security Monitoring (90% manual):**
-- **Source**: IT operations time allocation analysis
-- **Methodology**: Percentage of security tasks requiring manual intervention vs. automated responses
-- **Industry Context**: 80-95% manual security operations without automation frameworks
-- **Calculation**: Security team time allocation analysis before automation implementation
-
-<a name="ref6"></a>**[6] Risk Reduction ($500K+):**
-- **Calculation Method**:
-  - **Prevented Incidents**: 12 incidents/month × estimated incident cost × 12 months
-  - **Compliance Savings**: 32 hours saved × $150/hour × 4 audits/year = $19.2K/year
-  - **Operational Efficiency**: 1 Full Time Equivalent × $120K salary × 75% time savings = $90K/year
-  - **Avoided Compliance Risk**: Estimated regulatory risk reduction
-  - **Total Annual Value**: Conservative estimate ~$110K
-
-### Industry Reports and Context
-- **Data Breach Costs**: Based on IBM Cost of a Data Breach Report 2024 (conducted with Ponemon Institute) - global average breach cost $4.88 million
-- **Security Frameworks**: AWS Well-Architected Security Pillar Best Practices
-- **Multi-Cloud Governance**: Industry best practices for enterprise cloud security
-- **Compliance Standards**: SOC2, PCI DSS, and HIPAA audit requirements
-
-### Important Notes
-- All metrics represent estimates based on internal analysis and industry benchmarks
-- Actual results may vary depending on organization size, industry, and existing security posture
-- Cost calculations use conservative estimates and may not reflect all potential savings
-- Industry benchmarks are approximations derived from multiple sources and should be used for reference only
-
-</details>
 
 ---
 
@@ -245,6 +190,63 @@ This project represents a hands-on AWS multi-account governance laboratory exerc
 - **Business Impact**: Cost savings and efficiency improvements represent demonstrated capabilities of the implemented security controls and governance patterns
 
 The technical implementation is production-grade and follows AWS Well-Architected security principles, demonstrating real-world enterprise governance patterns.
+
+<details>
+<summary><strong>📋 Click to expand baseline methodology and industry benchmarks</strong></summary>
+
+### Baseline Metrics Sources
+
+<a name="ref1"></a>**[1] Security Incidents (12/month):**
+- **Source**: Estimated based on industry averages for mid-size enterprises
+- **Methodology**: Conservative estimate based on AWS Config non-compliance events and CloudTrail anomalies
+- **Industry Context**: Organizations without centralized governance typically experience 8-15 incidents per month
+- **Calculation**: Based on internal AWS Config compliance reports and security event analysis
+
+<a name="ref2"></a>**[2] Compliance Audit Time (40 hours):**
+- **Source**: Internal audit preparation analysis
+- **Methodology**: Manual evidence collection across multiple AWS accounts
+- **Industry Benchmark**: Estimated 30-50 hours for multi-account manual audit preparation
+- **Calculation**: 4 accounts × 10 hours average manual evidence gathering per account
+
+<a name="ref3"></a>**[3] Unauthorized Resources (15/week):**
+- **Source**: AWS Config compliance reports and resource drift analysis
+- **Methodology**: Resources launched outside approved instance types, regions, or without proper tagging
+- **Industry Context**: Typical pattern of 10-20 non-compliant resources per week in unmanaged environments
+- **Calculation**: Based on developer behavior patterns in sandbox environments before governance implementation
+
+<a name="ref4"></a>**[4] Security Coverage (30% accounts):**
+- **Source**: AWS Security Hub findings and GuardDuty coverage analysis
+- **Methodology**: Percentage of accounts with consistent security monitoring and alerting
+- **Industry Context**: 20-40% coverage typical in decentralized multi-account setups
+- **Calculation**: 1 out of 4 accounts had comprehensive security tooling before implementation
+
+<a name="ref5"></a>**[5] Manual Security Monitoring (90% manual):**
+- **Source**: IT operations time allocation analysis
+- **Methodology**: Percentage of security tasks requiring manual intervention vs. automated responses
+- **Industry Context**: 80-95% manual security operations without automation frameworks
+- **Calculation**: Security team time allocation analysis before automation implementation
+
+<a name="ref6"></a>**[6] Risk Reduction ($500K+):**
+- **Calculation Method**:
+  - **Prevented Incidents**: 12 incidents/month × estimated incident cost × 12 months
+  - **Compliance Savings**: 32 hours saved × $150/hour × 4 audits/year = $19.2K/year
+  - **Operational Efficiency**: 1 Full Time Equivalent × $120K salary × 75% time savings = $90K/year
+  - **Avoided Compliance Risk**: Estimated regulatory risk reduction
+  - **Total Annual Value**: Conservative estimate ~$110K
+
+### Industry Reports and Context
+- **Data Breach Costs**: Based on IBM Cost of a Data Breach Report 2024 (conducted with Ponemon Institute) - global average breach cost $4.88 million
+- **Security Frameworks**: AWS Well-Architected Security Pillar Best Practices
+- **Multi-Cloud Governance**: Industry best practices for enterprise cloud security
+- **Compliance Standards**: SOC2, PCI DSS, and HIPAA audit requirements
+
+### Important Notes
+- All metrics represent estimates based on internal analysis and industry benchmarks
+- Actual results may vary depending on organization size, industry, and existing security posture
+- Cost calculations use conservative estimates and may not reflect all potential savings
+- Industry benchmarks are approximations derived from multiple sources and should be used for reference only
+
+</details>
 
 ---
 
