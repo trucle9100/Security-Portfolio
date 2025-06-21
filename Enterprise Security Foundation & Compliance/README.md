@@ -176,45 +176,48 @@ This project represents a hands-on AWS security laboratory exercise designed to 
 <summary><strong>Click to expand detailed methodology and industry benchmarks</strong></summary>
 
 ### **Baseline Metrics Sources & Methodology**
-
 <a name="ref1"></a>**[1] Security Hub Score (42% → 89%):**
 - **Source**: AWS Security Hub CIS AWS Foundations Benchmark assessment
-- **Methodology**: Intentionally created insecure baseline with common misconfigurations for lab purposes
+- **Methodology**: Intentionally created insecure baseline with common misconfigurations for demonstration purposes
 - **Baseline Creation**: Deployed resources with public S3 access, IMDSv1, unencrypted EBS, weak IAM policies
 - **Industry Context**: Organizations without security automation typically score 30-50% on initial assessments
-- **Calculation**: Security Hub dashboard compliance percentage before/after remediation
+- **Calculation**: Security Hub dashboard compliance percentage - calculated as "the percentage of controls that passed evaluation, relative to the total number of controls that apply to the standard"
+- **Environment Scope**: Results specific to this lab/demonstration environment
 
 <a name="ref2"></a>**[2] Critical Findings (8 → 0):**
 - **Source**: AWS Security Hub critical severity findings count
-- **Methodology**: Count of high/critical security violations identified by Security Hub
+- **Methodology**: Count of high/critical security violations identified by Security Hub in this specific environment
 - **Baseline Findings**: Public S3 buckets, IMDSv1 enabled, unencrypted storage, weak cross-account access, missing guardrails
-- **Industry Context**: Typical enterprise environments have 5-15 critical findings per account
+- **Industry Context**: Typical enterprise environments have 5-15 critical findings per account (varies by organization maturity)
 - **Calculation**: Security Hub findings dashboard filtered by "CRITICAL" severity level
+- **Environment Scope**: Findings eliminated within this specific AWS account/environment
 
 <a name="ref3"></a>**[3] Time to Fix Issues (3 days → 15 minutes):**
-- **Source**: Manual remediation workflow vs automated response time
-- **Methodology**: Time from issue detection to complete remediation
-- **Manual Process**: Detection → Assessment → Planning → Approval → Implementation → Verification
+- **Source**: This organization's manual remediation workflow vs automated response time
+- **Methodology**: Time from issue detection to complete remediation in this specific environment
+- **Manual Process**: Detection → Assessment → Planning → Approval → Implementation → Verification (organization-specific workflow)
 - **Automated Process**: Config rule trigger → Lambda function → Immediate remediation
-- **Industry Context**: Manual security issue resolution typically takes 48-72 hours in enterprise environments
-- **Calculation**: Process documentation and remediation timestamp analysis
+- **Industry Context**: Manual security issue resolution varies widely (24-72+ hours) depending on organization size and processes
+- **Calculation**: Process documentation and remediation timestamp analysis for this implementation
+- **Environment Scope**: Timing specific to this organization's processes and automation implementation
 
 <a name="ref4"></a>**[4] Config Rules Passing (3/12 → 12/12):**
 - **Source**: AWS Config compliance dashboard
-- **Methodology**: CIS AWS Foundations Benchmark config rules deployment and compliance measurement
-- **Baseline State**: Deployed 12 CIS benchmark rules against intentionally non-compliant resources
-- **Rules Monitored**: S3 encryption, public access, IAM policies, EBS encryption, VPC security groups, etc.
-- **Industry Context**: Organizations without governance typically achieve 20-30% config rule compliance
-- **Calculation**: AWS Config dashboard showing compliant/non-compliant rules ratio
+- **Methodology**: Focused subset of CIS AWS Foundations Benchmark config rules deployment and compliance measurement
+- **Baseline State**: Deployed 12 selected CIS benchmark rules against intentionally non-compliant resources
+- **Rules Monitored**: S3 encryption, public access, IAM policies, EBS encryption, VPC security groups, CloudTrail logging, etc.
+- **Industry Context**: Full CIS v3.0 standard contains 37+ security controls; this represents a focused implementation subset
+- **Calculation**: AWS Config dashboard showing compliant/non-compliant rules ratio for selected rules
+- **Environment Scope**: Results specific to the 12 rules implemented in this demonstration environment
 
 <a name="ref5"></a>**[5] Manual Audit Time (3 weeks → 2 days):**
-- **Source**: Audit preparation workflow analysis
-- **Methodology**: Time required for compliance evidence collection and documentation
-- **Manual Process**: Evidence gathering → Documentation → Review → Remediation → Re-verification
+- **Source**: This organization's audit preparation workflow analysis
+- **Methodology**: Time required for compliance evidence collection and documentation in this specific environment
+- **Manual Process**: Evidence gathering → Documentation → Review → Remediation → Re-verification (organization-specific workflow)
 - **Automated Process**: Automated compliance reports → Dashboard screenshots → Audit trail export
-- **Industry Context**: Manual compliance audits typically require 15-25 business days for evidence collection
+- **Industry Context**: Manual compliance audits typically require 1-4+ weeks for evidence collection (highly variable by organization size, maturity, and audit scope)
 - **Calculation**: Audit preparation workflow time tracking before/after automation implementation
-
+- **Environment Scope**: Timeline specific to this organization's audit preparation processes and requirements
 </details>
 
 ---
