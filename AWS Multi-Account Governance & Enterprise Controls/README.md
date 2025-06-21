@@ -15,7 +15,7 @@
 
 **Business Value Delivered:**
 - **Risk Reduction**<sup>[6](#ref6)</sup>: $500K+ prevented through automated security controls
-- **Operational Efficiency**: 90% reduction in manual security monitoring
+- **Operational Efficiency**<sup>[5](#ref5)</sup>: 90% reduction in manual security monitoring
 - **Compliance Ready**: SOC2, PCI, HIPAA audit preparation with complete audit trails
 - **Developer Velocity**: Self-service environments with built-in guardrails
 
