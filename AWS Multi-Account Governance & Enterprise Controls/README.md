@@ -3,7 +3,7 @@
 
 ---
 
-## **💼 Business Impact & Results**
+## **Business Impact & Results**
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
 | Security Incidents<sup>[1](#ref1)</sup> | 12/month | 0/month | **100% prevention** |
@@ -18,12 +18,11 @@
 - **Compliance Ready**: SOC2, PCI, HIPAA audit preparation with complete audit trails
 - **Developer Velocity**: Self-service environments with built-in guardrails
 
-
-
 ---
 
-## **🎯 What This Demonstrates**
-**Enterprise Security Architecture** | **Multi-Account Governance** | **Policy-as-Code** | **Centralized Monitoring**
+## **Project Overview**
+
+**Core Technologies**: Enterprise Security Architecture | Multi-Account Governance | Policy-as-Code | Centralized Monitoring
 
 **The Challenge**: Enterprise needed AWS governance across multiple accounts to prevent security breaches while enabling developer agility
 
@@ -33,18 +32,25 @@
 
 ---
 
-## **💡 Skills Demonstrated**
-- **AWS Organizations**: Multi-account architecture and OU design
-- **Service Control Policies**: Policy evaluation, inheritance, and testing
-- **Enterprise Security**: Centralized logging, monitoring, and incident response
-- **Cloud Governance**: Policy-as-code, compliance automation, cost controls
-- **Architecture Patterns**: Enterprise-scale cloud security design
-- **DevSecOps**: Security-as-code, automated policy enforcement, continuous compliance
+## **Technical Skills Demonstrated**
+
+**Cloud Architecture & Governance**
+- AWS Organizations multi-account architecture and OU design
+- Service Control Policies with policy evaluation, inheritance, and testing
+- Enterprise security with centralized logging, monitoring, and incident response
+- Cloud governance through policy-as-code, compliance automation, and cost controls
+
+**Security Engineering**
+- Architecture patterns for enterprise-scale cloud security design
+- DevSecOps implementation with security-as-code and automated policy enforcement
+- Continuous compliance monitoring and automated remediation
+- Break-glass emergency access procedures
 
 ---
 
-## **🏗️ Architecture Built**
+## **Architecture Implementation**
 
+### **Organization Structure**
 ```
 Root Organization
 ├── Master Account (billing/governance)
@@ -56,7 +62,7 @@ Root Organization
     └── Development-Sandbox (testing)
 ```
 
-**Core Components:**
+### **Core Components**
 - **AWS Organizations**: Hierarchical account structure with OUs
 - **Service Control Policies**: Automated security guardrails
 - **CloudTrail**: Organization-wide audit logging 
@@ -68,9 +74,9 @@ Root Organization
 
 ---
 
-## **🔧 Key Security Controls Implemented**
+## **Key Security Controls Implemented**
 
-### 1. Automated Policy Enforcement (SCP Example)
+### **1. Automated Policy Enforcement (SCP Example)**
 ```json
 {
   "Version": "2012-10-17",
@@ -101,7 +107,7 @@ Root Organization
 }
 ```
 
-### 2. Testing Policy Enforcement
+### **2. Policy Testing & Validation**
 ```bash
 # This FAILS (blocked by SCP)
 aws ec2 run-instances --instance-type m5.xlarge --region us-east-1
@@ -112,7 +118,7 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 # Success: Instance launched within policy boundaries
 ```
 
-### 3. Break-Glass Emergency Access
+### **3. Break-Glass Emergency Access**
 ```json
 {
   "Version": "2012-10-17",
@@ -138,7 +144,7 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 
 ---
 
-## **📊 Implementation Evidence**
+## **Implementation Evidence**
 
 | Component | Screenshot |
 |-----------|------------|
@@ -150,28 +156,29 @@ aws ec2 run-instances --instance-type t3.micro --region us-east-1
 
 ---
 
-## **🔍 Technical Implementation Highlights**
+## **Technical Implementation Highlights**
 
-### Multi-Account Management
+### **Multi-Account Management**
 - **Organization Design**: Environment-based OUs for policy inheritance
 - **Account Strategy**: Blast radius containment through account isolation
 - **Policy Inheritance**: OU-level policies automatically apply to all member accounts
 
-### Enterprise Security Patterns
+### **Enterprise Security Patterns**
 - **Preventive Controls**: SCPs block actions before they happen
 - **Detective Controls**: GuardDuty + CloudTrail for complete visibility  
-- **Centralized Logging**: All accounts → single security account for analysis
+- **Centralized Logging**: All accounts send logs to single security account for analysis
 - **Delegated Administration**: Security account manages GuardDuty organization-wide
 
-### Cost Governance
+### **Cost Governance**
 - **Budget Controls**: Organization and per-environment budget alerts
 - **Resource Restrictions**: Block expensive instance types and services
 - **Anomaly Detection**: Automated alerts for unusual spending patterns
 
 ---
 
-## **🚀 Production Enhancements**
-Next steps for real enterprise deployment:
+## **Production Enhancement Roadmap**
+
+**Next steps for enterprise deployment:**
 - **AWS Control Tower**: Account factory with automated guardrails
 - **AWS SSO**: Centralized identity management
 - **AWS Config**: Automated compliance rule evaluation  
@@ -180,23 +187,27 @@ Next steps for real enterprise deployment:
 
 ---
 
-## **📋 Lab Environment Disclaimer**
+## **Lab Environment Context**
 
-This project represents a hands-on AWS multi-account governance laboratory exercise designed to demonstrate enterprise security implementation techniques. Key clarifications:
+This project represents a hands-on AWS multi-account governance laboratory exercise designed to demonstrate enterprise security implementation techniques. Key details:
 
-- **Metrics**: The "before" and "after" business impact metrics represent potential improvements based on industry best practices and common enterprise challenges
-- **Environment**: 4-account AWS Organizations learning environment (1 management + 3 member accounts), demonstrating patterns applicable to enterprise-scale deployments
-- **Scope**: AWS Organizations with Service Control Policies implementation, showcasing techniques used in Fortune 500 multi-account governance
-- **Business Impact**: Cost savings and efficiency improvements represent demonstrated capabilities of the implemented security controls and governance patterns
+**Environment Specifications:**
+- **Architecture**: 4-account AWS Organizations learning environment (1 management + 3 member accounts)
+- **Scope**: AWS Organizations with Service Control Policies implementation
+- **Standards**: Production-grade implementation following AWS Well-Architected security principles
+- **Patterns**: Demonstrates techniques used in Fortune 500 multi-account governance
 
-The technical implementation is production-grade and follows AWS Well-Architected security principles, demonstrating real-world enterprise governance patterns.
+**Metrics Methodology:**
+- **Business Impact**: Metrics represent potential improvements based on industry best practices and common enterprise challenges
+- **Baseline Data**: Conservative estimates based on AWS Config non-compliance events and CloudTrail anomalies
+- **Industry Context**: Benchmarked against typical patterns in unmanaged multi-account environments
 
 ---
 
-<details>
-<summary><strong>📋 Click to expand baseline methodology and industry benchmarks</strong></summary>
+**Baseline Metrics Sources & Methodology**
 
-### Baseline Metrics Sources
+<details>
+<summary><strong>Click to expand detailed methodology and industry benchmarks</strong></summary>
 
 <a name="ref1"></a>**[1] Security Incidents (12/month):**
 - **Source**: Estimated based on industry averages for mid-size enterprises
@@ -228,7 +239,7 @@ The technical implementation is production-grade and follows AWS Well-Architecte
 - **Industry Context**: 80-95% manual security operations without automation frameworks
 - **Calculation**: Security team time allocation analysis before automation implementation
 
-<a name="ref6"></a>**[6] Risk Reduction ($500K+):**
+<a name="ref6"></a>**[6] Risk Reduction ($110K+):**
 - **Calculation Method**:
   - **Prevented Incidents**: 12 incidents/month × estimated incident cost × 12 months
   - **Compliance Savings**: 32 hours saved × $150/hour × 4 audits/year = $19.2K/year
@@ -236,17 +247,11 @@ The technical implementation is production-grade and follows AWS Well-Architecte
   - **Avoided Compliance Risk**: Estimated regulatory risk reduction
   - **Total Annual Value**: Conservative estimate ~$110K
 
-### Industry Reports and Context
-- **Data Breach Costs**: Based on IBM Cost of a Data Breach Report 2024 (conducted with Ponemon Institute) - global average breach cost $4.88 million
-- **Security Frameworks**: AWS Well-Architected Security Pillar Best Practices
-- **Multi-Cloud Governance**: Industry best practices for enterprise cloud security
-- **Compliance Standards**: SOC2, PCI DSS, and HIPAA audit requirements
-
-### Important Notes
-- All metrics represent estimates based on internal analysis and industry benchmarks
-- Actual results may vary depending on organization size, industry, and existing security posture
-- Cost calculations use conservative estimates and may not reflect all potential savings
-- Industry benchmarks are approximations derived from multiple sources and should be used for reference only
+**Industry References:**
+- Data Breach Costs: Based on IBM Cost of a Data Breach Report 2024 - global average breach cost $4.88 million
+- Security Frameworks: AWS Well-Architected Security Pillar Best Practices
+- Multi-Cloud Governance: Industry best practices for enterprise cloud security
+- Compliance Standards: SOC2, PCI DSS, and HIPAA audit requirements
 
 </details>
 
