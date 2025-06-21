@@ -13,7 +13,7 @@
 | Manual Security Monitoring<sup>[5](#ref5)</sup> | 90% manual | 10% manual | **90% automation** |
 
 **Business Value Delivered:**
-- **Risk Reduction**<sup>[6](#ref6)</sup>: $500K+ prevented through automated security controls
+- **Risk Reduction**<sup>[6](#ref6)</sup>: $110K+ prevented through automated security controls
 - **Operational Efficiency**<sup>[5](#ref5)</sup>: 90% reduction in manual security monitoring
 - **Compliance Ready**: SOC2, PCI, HIPAA audit preparation with complete audit trails
 - **Developer Velocity**: Self-service environments with built-in guardrails
@@ -59,7 +59,7 @@
   - **Compliance Savings**: 32 hours saved × $150/hour × 4 audits/year = $19.2K/year
   - **Operational Efficiency**: 1 Full Time Equivalent × $120K salary × 75% time savings = $90K/year
   - **Avoided Compliance Risk**: Estimated regulatory risk reduction
-  - **Total Annual Value**: Conservative estimate ~$500K
+  - **Total Annual Value**: Conservative estimate ~$110K
 
 ### Industry Reports and Context
 - **Data Breach Costs**: Based on IBM Cost of a Data Breach Report 2024 (conducted with Ponemon Institute) - global average breach cost $4.88 million
