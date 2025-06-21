@@ -57,7 +57,7 @@
 - **Calculation Method**:
   - **Prevented Incidents**: 12 incidents/month × estimated incident cost × 12 months
   - **Compliance Savings**: 32 hours saved × $150/hour × 4 audits/year = $19.2K/year
-  - **Operational Efficiency**: 1 FTE × $120K salary × 75% time savings = $90K/year
+  - **Operational Efficiency**: 1 Full Time Equivalent × $120K salary × 75% time savings = $90K/year
   - **Avoided Compliance Risk**: Estimated regulatory risk reduction
   - **Total Annual Value**: Conservative estimate ~$500K
 
