@@ -1,11 +1,10 @@
 # Intelligent Cost Governance Platform | 85% Reduction in Budget Overages  
 *Automated cost monitoring with AWS Budgets, Lambda, SNS, and CloudWatch*  
-[![AWS](https://img.shields.io/badge/AWS-FF9900?logo=amazonaws&logoColor=white)](https://aws.amazon.com) 
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python)](https://python.org)
-
 ---
 
-## **💼 Business Impact & Results**
+
+## Business Impact & Results
+
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
 | Budget Overages<sup>[1](#ref1)</sup> | 15/month | 2/month | **85% reduction** |
@@ -15,14 +14,16 @@
 | Manual Cost Reviews<sup>[5](#ref5)</sup> | 100% manual | 10% manual | **90% automation** |
 
 **Business Value Delivered:**
+
 - **Cost Control**<sup>[6](#ref6)</sup>: $15K+ monthly savings through proactive budget monitoring
 - **Operational Efficiency**<sup>[2](#ref2)</sup>: 90% reduction in manual cost monitoring tasks
 - **Risk Mitigation**<sup>[7](#ref7)</sup>: Real-time alerts prevent budget overruns before they impact business
 - **Financial Visibility**: Complete cost transparency across all AWS services
 
+
 ---
 
-## **🎯 What This Demonstrates**
+## Project Overview
 **Cloud Cost Management** | **Serverless Architecture** | **Event-Driven Automation** | **Cross-Service Integration**
 
 **The Challenge**: Manual cost monitoring led to frequent budget overages and delayed financial visibility
@@ -33,7 +34,7 @@
 
 ---
 
-## **💡 Skills Demonstrated**
+## Skills Demonstrated
 - **AWS Budgets**: Cost threshold configuration and automated alerting
 - **AWS Lambda**: Serverless event processing and SNS integration
 - **Amazon SNS**: Multi-channel notification delivery and subscription management
@@ -43,7 +44,7 @@
 
 ---
 
-## **🏗️ Architecture Built**
+## Architecture Built
 
 ![Architecture](diagram/CostTracker_Diagram.png)
 
@@ -55,7 +56,7 @@
 
 ---
 
-## **🔧 Key Implementation Components**
+## Key Implementation Components
 
 ### 1. Lambda Function for Budget Processing
 ```python
@@ -97,7 +98,7 @@ def lambda_handler(event, context):
 
 ---
 
-## **📊 Implementation Evidence**
+## Implementation Evidence
 
 | Component | Screenshot |
 |-----------|------------|
@@ -109,7 +110,7 @@ def lambda_handler(event, context):
 
 ---
 
-## **🔍 Technical Implementation Highlights**
+## Technical Implementation Highlights
 
 ### Event-Driven Cost Management
 - **Budget Triggers**: Automated threshold monitoring with real-time detection
@@ -128,7 +129,7 @@ def lambda_handler(event, context):
 
 ---
 
-## **🚀 How to Deploy**
+## How to Deploy
 
 ```bash
 # Clone repository
@@ -143,7 +144,7 @@ aws budgets create-budget --account-id YOUR_ACCOUNT_ID --budget file://budget-co
 
 ---
 
-## **🚀 Production Enhancements**
+## Production Enhancements
 Next steps for enterprise deployment:
 - **Multi-Account Budgets**: Consolidated billing across AWS Organizations
 - **Advanced Notifications**: Slack, Microsoft Teams, and SMS integration
@@ -153,7 +154,7 @@ Next steps for enterprise deployment:
 
 ---
 
-## **📋 Lab Environment Disclaimer**
+## Lab Environment Disclaimer
 
 This project represents a hands-on AWS cost management laboratory exercise designed to demonstrate automated budget monitoring and alerting techniques. Key clarifications:
 
@@ -167,7 +168,7 @@ The technical implementation follows AWS Well-Architected cost optimization prin
 ---
 
 <details>
-<summary><strong>📋 Click to expand baseline methodology and industry benchmarks</strong></summary>
+<summary><strong> Click to expand baseline methodology and industry benchmarks</strong></summary>
 
 ### Baseline Metrics Sources
 
@@ -230,6 +231,7 @@ The technical implementation follows AWS Well-Architected cost optimization prin
 - Industry benchmarks are approximations derived from multiple sources and should be used for reference only
 - Lab environment simulates real-world cost scenarios but may not capture all production variables
 - Savings calculations assume consistent usage patterns and may fluctuate based on business requirements
+
 
 </details>
 

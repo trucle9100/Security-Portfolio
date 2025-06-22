@@ -3,7 +3,9 @@
 
 ---
 
-## **💼 Business Impact & Results**
+
+## Business Impact & Results
+
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
 | Email Delivery Success<sup>[1](#ref1)</sup> | 85% | 99.9% | **17% improvement** |
@@ -20,7 +22,7 @@
 
 ---
 
-## **🎯 What This Demonstrates**
+## Project Overview
 **Serverless Architecture** | **Fault-Tolerant Workflows** | **API Security** | **Static Website Hosting**
 
 **The Challenge**: Build a reliable customer communication system that scales automatically while minimizing infrastructure costs
@@ -31,7 +33,7 @@
 
 ---
 
-## **💡 Skills Demonstrated**
+## Skills Demonstrated
 - **AWS Lambda**: Serverless compute with SES integration and error handling
 - **Step Functions**: Fault-tolerant workflow orchestration with retries
 - **API Gateway**: Secure REST API with CORS and authentication
@@ -41,7 +43,7 @@
 
 ---
 
-## **🏗️ Architecture Built**
+## Architecture Built
 
 ![Architecture Diagram](diagram/ServerlessApplication.png)
 
@@ -52,10 +54,9 @@
 - **AWS Lambda**: Email processing with SES permissions
 - **Amazon SES**: Verified email delivery service
 
-
 ---
 
-## **🔧 Key Technical Implementation**
+## Key Technical Implementation
 
 ### 1. Lambda Function with Error Handling
 ```python
@@ -158,7 +159,7 @@ def lambda_handler(event, context):
 
 ---
 
-## **📊 Implementation Evidence**
+## Implementation Evidence
 
 | Component | Screenshot |
 |-----------|------------|
@@ -168,7 +169,7 @@ def lambda_handler(event, context):
 
 ---
 
-## **🔍 Technical Implementation Highlights**
+## Technical Implementation Highlights
 
 ### Serverless Architecture Patterns
 - **Event-Driven Design**: Form submission triggers API Gateway → Step Functions workflow
@@ -187,7 +188,7 @@ def lambda_handler(event, context):
 
 ---
 
-## **🚀 Production Enhancements**
+## Production Enhancements
 Next steps for enterprise deployment:
 - **CloudFront Distribution**: HTTPS termination and global CDN
 - **DynamoDB Integration**: Message logging and audit trails
@@ -197,7 +198,7 @@ Next steps for enterprise deployment:
 
 ---
 
-## **📋 Lab Environment Disclaimer**
+## Lab Environment Disclaimer
 
 This project represents a hands-on AWS serverless architecture laboratory exercise designed to demonstrate enterprise communication system implementation techniques. Key clarifications:
 

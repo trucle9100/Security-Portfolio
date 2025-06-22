@@ -3,7 +3,9 @@
 
 ---
 
-## **💼 Business Impact & Results**
+
+## Business Impact & Results
+
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
 | System Downtime<sup>[1](#ref1)</sup> | 45 min/month | 2 min/month | **95% reduction** |
@@ -20,7 +22,7 @@
 
 ---
 
-## **🎯 What This Demonstrates**
+## Project Overview
 **Infrastructure Automation** | **CloudWatch Monitoring** | **Auto-Recovery Patterns** | **Proactive Alerting**
 
 **The Challenge**: Web applications needed automated recovery from system failures without manual intervention
@@ -31,7 +33,7 @@
 
 ---
 
-## **💡 Skills Demonstrated**
+## Skills Demonstrated
 - **AWS CloudWatch**: Metric monitoring, alarm configuration, and threshold management
 - **Amazon SNS**: Multi-channel notification systems and alert routing
 - **EC2 Management**: Instance monitoring, auto-recovery, and health checks
@@ -41,7 +43,7 @@
 
 ---
 
-## **🏗️ Architecture Built**
+## Architecture Built
 
 ![Architecture Diagram](diagram/autohealing_diagram.png)
 
@@ -54,7 +56,7 @@
 
 ---
 
-## **🔧 Key Technical Implementation**
+## Key Technical Implementation
 
 ### 1. EC2 Instance Configuration
 ```bash
@@ -92,7 +94,7 @@ stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 
 ---
 
-## **📊 Implementation Evidence**
+## Implementation Evidence
 
 | Component | Screenshot |
 |-----------|------------|
@@ -101,7 +103,7 @@ stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 
 ---
 
-## **🔍 Technical Implementation Highlights**
+## Technical Implementation Highlights
 
 ### Automated Monitoring
 - **CloudWatch Integration**: Real-time CPU utilization monitoring with 5-minute data points
@@ -120,7 +122,7 @@ stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 
 ---
 
-## **🚀 Production Enhancements**
+## Production Enhancements
 Next steps for enterprise deployment:
 - **Auto Scaling Groups**: Horizontal scaling with health check replacement
 - **Application Load Balancer**: Multi-AZ distribution with health checks
@@ -130,7 +132,7 @@ Next steps for enterprise deployment:
 
 ---
 
-## **📋 Lab Environment Disclaimer**
+## Lab Environment Disclaimer
 
 This project represents a hands-on AWS infrastructure automation laboratory exercise designed to demonstrate self-healing architecture implementation techniques. Key clarifications:
 
