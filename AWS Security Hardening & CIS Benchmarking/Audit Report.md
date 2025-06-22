@@ -3,7 +3,7 @@
 Duration: 3-4 hours | Cost: ~$15-25
 
 ## Why This Implementation Matters
-- **Enterprise-Grade Compliance**: Demonstrates automated CIS Benchmark v1.4[3] compliance for SOC2 certification
+- **Enterprise-Grade Compliance**: Demonstrates automated CIS Benchmark v1.4[<sup>3</sup>](#references) compliance for SOC2 certification
 - **Advanced Security Automation**: Shows mastery of Config, EventBridge, Lambda, and Security Hub
 - **Real-World Problem Solving**: Addresses actual enterprise challenges around continuous compliance and auto-remediation
 
@@ -20,7 +20,7 @@ Duration: 3-4 hours | Cost: ~$15-25
 - 100% automated CIS compliance enforcement  
 - Real-time violation detection and remediation
 - Self-healing security infrastructure
-- 8-minute mean time to remediation[4]
+- 8-minute mean time to remediation[<sup>4</sup>](#references)
 
 ---
 
@@ -168,11 +168,11 @@ aws cloudwatch get-metric-statistics --namespace AWS/Events --metric-name Succes
 
 | **Metric** | **Before** | **After** |
 |------------|------------|-----------|
-| CIS Compliance Score | 58%[5] | 94%[6] |
-| Critical Vulnerabilities | 3[7] | 0[8] |
-| Mean Time to Remediation | 72 hours[9] | 8 minutes[10] |
-| Security Automation Coverage | 0%[11] | 100%[12] |
-| Manual Compliance Checks | Weekly[13] | Real-time[14] |
+| CIS Compliance Score | 58%[<sup>5</sup>](#references) | 94%[<sup>6</sup>](#references) |
+| Critical Vulnerabilities | 3[<sup>7</sup>](#references) | 0[<sup>8</sup>](#references) |
+| Mean Time to Remediation | 72 hours[<sup>9</sup>](#references) | 8 minutes[<sup>10</sup>](#references) |
+| Security Automation Coverage | 0%[<sup>11</sup>](#references) | 100%[<sup>12</sup>](#references) |
+| Manual Compliance Checks | Weekly[<sup>13</sup>](#references) | Real-time[<sup>14</sup>](#references) |
 
 ---
 
@@ -216,7 +216,7 @@ aws cloudwatch get-metric-statistics --namespace AWS/Events --metric-name Succes
 
 **Solution**: Event-driven architecture using AWS Config for continuous monitoring with automated EventBridge-triggered remediation.
 
-**Impact**: Achieved 99% reduction[15] in security exposure window from 72 hours to 8 minutes with 100% automation coverage[16].
+**Impact**: Achieved 99% reduction[<sup>15</sup>](#references) in security exposure window from 72 hours to 8 minutes with 100% automation coverage[<sup>16</sup>](#references).
 
 ### Key Technical Areas
 1. **Config Rule Engineering**: Custom and managed rules for CIS compliance
@@ -226,20 +226,20 @@ aws cloudwatch get-metric-statistics --namespace AWS/Events --metric-name Succes
 5. **Audit Trail Design**: CloudTrail integration for compliance evidence
 
 ### Business Value
-- **Risk Reduction**: Eliminated 3 critical vulnerabilities[17] through automation
-- **Compliance Efficiency**: 94% CIS compliance score[18] with minimal manual effort
-- **Audit Readiness**: Continuous evidence generation for SOC2 Type II[19] certification
-- **Cost Optimization**: Reduced manual security operations overhead by 80%[20]
+- **Risk Reduction**: Eliminated 3 critical vulnerabilities[<sup>17</sup>](#references) through automation
+- **Compliance Efficiency**: 94% CIS compliance score[<sup>18</sup>](#references) with minimal manual effort
+- **Audit Readiness**: Continuous evidence generation for SOC2 Type II[<sup>19</sup>](#references) certification
+- **Cost Optimization**: Reduced manual security operations overhead by 80%[<sup>20</sup>](#references)
 
 ---
 
 ## SOC2 Compliance Evidence Generated
 
 ### Automated Control Documentation
-- **Security Control Design**: Lambda functions implementing CIS controls[21]
-- **Control Effectiveness**: Config compliance history and remediation logs[22]
-- **Access Management**: IAM policies restricting security configuration changes[23]
-- **Monitoring Coverage**: 100% resource compliance tracking[24] with alerting
+- **Security Control Design**: Lambda functions implementing CIS controls[<sup>21</sup>](#references)
+- **Control Effectiveness**: Config compliance history and remediation logs[<sup>22</sup>](#references)
+- **Access Management**: IAM policies restricting security configuration changes[<sup>23</sup>](#references)
+- **Monitoring Coverage**: 100% resource compliance tracking[<sup>24</sup>](#references) with alerting
 
 ### Audit Artifacts Available
 ```bash
@@ -352,6 +352,6 @@ aws securityhub get-findings --filters '{"ComplianceStatus":[{"Value":"FAILED"}]
 
 ---
 
-**Implementation Completion Time**: ~4 hours[25]
+**Implementation Completion Time**: ~4 hours[<sup>25</sup>](#references)
 
 **Skills Demonstrated**: CIS compliance automation, event-driven security architecture, AWS Config mastery, Lambda remediation, Security Hub integration, SOC2 audit readiness
