@@ -3,7 +3,7 @@
 
 ---
 
-## **💼 Business Impact & Results**
+## Business Impact & Results
 
 | Metric | Before | After | Impact |
 |--------|--------|-------|---------|
@@ -20,7 +20,7 @@
 
 ---
 
-## **🎯 What This Demonstrates**
+## Project Overview
 **Security Automation** | **Event-Driven Architecture** | **Incident Response** | **Compliance Monitoring**
 
 **The Challenge**: Organizations need automated security operations to reduce incident response time and maintain continuous compliance
@@ -31,7 +31,7 @@
 
 ---
 
-## **💡 Skills Demonstrated**
+## Skills Demonstrated
 - **AWS Security Services**: Config, GuardDuty, EventBridge, Lambda, Step Functions integration
 - **Security Automation**: Event-driven response patterns, serverless security functions
 - **Incident Response**: Automated remediation, workflow orchestration, real-time alerting
@@ -41,7 +41,7 @@
 
 ---
 
-## **🏗️ Architecture Built**
+## Architecture Built
 
 **Event-Driven Security Pattern:**
 ```
@@ -65,7 +65,7 @@ CloudWatch → SNS → Real-time Alerts
 
 ---
 
-## **🔧 Key Security Automations Implemented**
+## Key Security Automations Implemented
 
 ### 1. Automated Security Group Remediation
 ```python
@@ -115,7 +115,7 @@ aws ec2 authorize-security-group-ingress --group-id sg-xxx --protocol tcp --port
 
 ---
 
-## **📊 Implementation Evidence**
+## Implementation Evidence
 
 | What Was Built | Screenshot |
 |-----------|------------|
@@ -127,7 +127,7 @@ aws ec2 authorize-security-group-ingress --group-id sg-xxx --protocol tcp --port
 
 ---
 
-## **🔍 Technical Implementation Highlights**
+## Technical Implementation Highlights
 
 ### Event-Driven Security Architecture
 - **Detection Layer**: Config Rules + GuardDuty findings trigger automated responses
@@ -149,7 +149,7 @@ aws ec2 authorize-security-group-ingress --group-id sg-xxx --protocol tcp --port
 
 ---
 
-## **🚀 Production Enhancements**
+## Production Enhancements
 Next steps for enterprise deployment:
 - **AWS Organizations**: Multi-account security with centralized policies
 - **Security Hub**: Consolidated security findings across services
@@ -158,7 +158,7 @@ Next steps for enterprise deployment:
 
 ---
 
-## **📋 Lab Environment Disclaimer**
+## Lab Environment Disclaimer
 
 This project represents a hands-on AWS security automation laboratory exercise designed to demonstrate enterprise security implementation techniques. Key clarifications:
 
