@@ -135,77 +135,101 @@ aws configservice get-compliance-details-by-config-rule \
 
 ---
 
-## Technical Implementation Highlights
+## Technical Implementation Highlights & Skills Demonstrated
 
-### Continuous Compliance Monitoring
-- **AWS Config Rules**: CIS benchmark v1.4 automated evaluation
-- **Real-time Detection**: Config evaluates resources on creation/modification
-- **EventBridge Integration**: Immediate trigger on compliance violations
+### AWS Security Services Implementation
 
-### Automated Remediation Pipeline
-- **Lambda Functions**: Serverless remediation for S3, EC2, and EBS violations
-- **IAM Least Privilege**: Remediation functions with minimal required permissions
-- **Error Handling**: Comprehensive logging and failure notification
+<details>
+<summary><strong>Continuous Compliance Monitoring</strong></summary>
 
-### Security Hub Integration
-- **Centralized Dashboard**: Aggregated findings from Config, GuardDuty, and Inspector
-- **CIS Controls Mapping**: Direct correlation to CIS benchmark requirements
-- **Compliance Scoring**: Automated SOC2 readiness assessment
+- **AWS Config Rules**: Implemented CIS AWS Foundations Benchmark v1.4 controls including s3-bucket-public-write-prohibited, ec2-imdsv2-check, and encrypted-volumes for automated compliance evaluation
+
+- **Real-time Detection**: Config evaluates resources on creation/modification with 5-10 minute evaluation windows
+
+- **Security Hub Integration**: Centralized dashboard aggregating findings from Config, GuardDuty, and Inspector with direct CIS controls mapping and automated SOC2 readiness assessment
+
+</details>
+
+<details>
+<summary><strong>Automated Remediation Pipeline</strong></summary>
+
+- **Lambda Functions**: Built Python-based serverless remediation using boto3 for S3, EC2, and EBS violations with comprehensive error handling and CloudWatch logging
+
+- **EventBridge Integration**: Created event-driven triggers responding to Config compliance changes with optimized event patterns for immediate violation response
+
+- **IAM Least Privilege**: Applied minimal required permissions for Lambda execution roles and service integrations (s3:PutEncryptionConfiguration, s3:PutPublicAccessBlock)
+
+</details>
+
+<details>
+<summary><strong>Infrastructure Security & Hardening</strong></summary>
+
+- **S3 Security**: Implemented bucket hardening with public access blocking and default AES256 encryption following CIS security standards
+
+- **EC2 Configuration**: Set up instances with IMDSv2 enforcement and security group best practices for metadata service security
+
+- **EBS Encryption**: Automated encryption requirements for storage volumes to meet compliance standards
+
+</details>
+
+### Security & Compliance Expertise
+
+<details>
+<summary><strong>CIS Benchmarks & Standards</strong></summary>
+
+- **CIS AWS Foundations Benchmark v1.4**: Implemented industry-standard security configurations covering critical AWS services
+
+- **SOC2 Compliance**: Designed automated controls for audit readiness with documented security procedures and continuous monitoring
+
+- **Vulnerability Remediation**: Automated fixes for critical security misconfigurations including public S3 buckets, unencrypted storage, and weak metadata service configurations
+
+</details>
+
+<details>
+<summary><strong>Security Automation Architecture</strong></summary>
+
+- **Event-Driven Architecture**: Implemented serverless patterns using EventBridge for scalable, real-time security automation
+
+- **Defense-in-Depth**: Applied multi-layered security strategies with automated controls, monitoring, and rapid remediation
+
+- **Zero-Touch Remediation**: Eliminated manual security interventions through intelligent automation workflows
+
+</details>
+
+### Technical Implementation Skills
+
+<details>
+<summary><strong>Development & Scripting</strong></summary>
+
+- **Python Automation**: Developed robust Lambda functions with proper exception handling, logging, and AWS service integration
+
+- **AWS CLI Operations**: Command-line testing and validation of security configurations and compliance status verification
+
+- **Infrastructure as Code**: Created reusable automation patterns suitable for enterprise deployment and scaling
+
+</details>
+
+<details>
+<summary><strong>Problem-Solving & Optimization</strong></summary>
+
+- **Testing & Validation**: Created controlled security violations to verify detection and remediation workflows function correctly
+
+- **Performance Optimization**: Resolved Lambda timeout issues and optimized Config rule evaluation timing
+
+- **Troubleshooting**: Debugged IAM permissions, Lambda execution issues, and EventBridge rule configuration problems
+
+</details>
 
 ---
 
 ## Production Enhancements
 Next steps for enterprise deployment:
-- **Multi-Account Config**: Organization-wide compliance monitoring
-- **Custom Config Rules**: Business-specific security requirements
-- **SNS Notifications**: Real-time alerts to security teams
-- **Terraform Modules**: Reusable compliance infrastructure patterns
-
----
-
-## Skills Demonstrated & Technologies Used
-
-<details>
-<summary><strong>Core AWS Services Implemented</strong></summary>
-
-- **AWS Config**: Configured CIS benchmark rules (s3-bucket-public-write-prohibited, ec2-imdsv2-check, encrypted-volumes) for continuous compliance monitoring
-- **Lambda**: Built Python-based auto-remediation functions for S3 security violations with proper error handling and logging
-- **EventBridge**: Created event-driven triggers to automatically respond to Config compliance changes
-- **S3**: Implemented bucket hardening (public access blocking, default encryption) following CIS security standards
-- **EC2**: Configured instances with IMDSv1/v2 settings and security group best practices
-- **IAM**: Applied least-privilege permissions for Lambda execution roles and service integrations
-- **CloudWatch**: Set up compliance dashboards and logging for monitoring remediation activities
-
-</details>
-
-<details>
-<summary><strong>Security & Compliance Skills</strong></summary>
-
-- **CIS Benchmarks**: Implemented AWS Foundations Benchmark v1.4 controls for SOC2 compliance readiness
-- **Security Automation**: Designed event-driven remediation workflows to eliminate manual security tasks
-- **Vulnerability Remediation**: Automated fixes for critical security misconfigurations (public S3 buckets, unencrypted storage)
-- **Compliance Monitoring**: Real-time detection and reporting of security violations using Security Hub integration
-
-</details>
-
-<details>
-<summary><strong>Technical Implementation</strong></summary>
-
-- **Python Scripting**: Developed Lambda functions with boto3 for AWS service automation and error handling
-- **Event-Driven Architecture**: Implemented serverless patterns using EventBridge for scalable security automation
-- **AWS CLI Operations**: Command-line testing and validation of security configurations and compliance status
-- **Infrastructure Security**: Applied defense-in-depth strategies with automated security controls and monitoring
-
-</details>
-
-<details>
-<summary><strong>Problem-Solving Approach</strong></summary>
-
-- **Testing & Validation**: Created controlled security violations to verify detection and remediation workflows
-- **Documentation**: Maintained clear technical documentation for compliance audit requirements
-- **Troubleshooting**: Debugged IAM permissions, Lambda timeouts, and Config rule evaluation timing issues
-
-</details>
+- **Multi-Account Support**: Scale this solution across AWS Organizations for enterprise-wide compliance monitoring using organization-wide Config aggregation
+- **Custom Config Rules**: Business-specific security requirements and expanded CIS controls
+- **Enhanced CIS Coverage**: Expand automation to cover EC2 instance hardening (IMDSv2 enforcement) and EBS encryption requirements
+- **Real-Time Notifications**: Add SNS alerts to notify security teams when violations occur and are remediated
+- **Cost Monitoring**: Implement AWS Budgets to track Lambda execution costs as the system scales
+- **Terraform Modules**: Reusable compliance infrastructure patterns for consistent deployment
 
 ---
 
@@ -213,17 +237,39 @@ Next steps for enterprise deployment:
 
 ### Key Challenges & Solutions
 
-**Lambda Function Timeouts**: Lambda functions were timing out during S3 remediation tasks.
+<details>
+<summary><strong>Lambda Function Timeouts</strong></summary>
+
+- **Challenge:** Lambda functions were timing out during S3 remediation tasks.
 - **Solution**: Increased timeout from default 3 seconds to 2 minutes and optimized code to handle multiple S3 operations efficiently.
 
-**IAM Permission Issues**: Initial Lambda execution failed due to insufficient permissions.
+</details>
+
+
+<details>
+<summary><strong>IAM Permission Issues</strong></summary>
+
+- **Challenge:** Initial Lambda execution failed due to insufficient permissions.
 - **Solution**: Added specific S3 permissions (s3:PutEncryptionConfiguration, s3:PutPublicAccessBlock) to the Lambda execution role.
 
-**Config Rule Evaluation Delays**: AWS Config rules took 15+ minutes to detect violations.
+</details>
+
+<details>
+<summary><strong>Config Rule Evaluation Delays</strong></summary>
+
+- **Challenge:** AWS Config rules took 15+ minutes to detect violations.
 - **Solution**: Implemented manual Config rule evaluation triggers and optimized EventBridge patterns for faster detection.
 
-**EventBridge Rule Configuration**: Auto-remediation wasn't triggering consistently.
+</details>
+
+<details>
+<summary><strong>EventBridge Rule Configuration</strong></summary>
+
+- **Challenge:** Auto-remediation wasn't triggering consistently.
 - **Solution**: Fixed EventBridge event patterns to properly filter Config compliance change notifications and target the correct Lambda function.
+
+</details>
+
 
 ### What I Learned
 
@@ -233,15 +279,6 @@ Next steps for enterprise deployment:
 
 **AWS Services Integration**: Learned how AWS Config, EventBridge, and Lambda work together to create a complete compliance monitoring and remediation pipeline.
 
-### Future Improvements
-
-**Add More CIS Controls**: Expand automation to cover EC2 instance hardening (IMDSv2 enforcement) and EBS encryption requirements.
-
-**Multi-Account Support**: Scale this solution across AWS Organizations for enterprise-wide compliance monitoring.
-
-**Real-Time Notifications**: Add SNS alerts to notify security teams when violations occur and are remediated.
-
-**Cost Monitoring**: Implement AWS Budgets to track Lambda execution costs as the system scales.
 
 ---
 
