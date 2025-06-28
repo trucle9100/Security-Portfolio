@@ -163,17 +163,67 @@ Next steps for enterprise deployment:
 
 ---
 
+## Skills Demonstrated & Technologies Used
+
+<details>
+<summary><strong>Core AWS Services Implemented</strong></summary>
+
+- **AWS Config**: Configured CIS benchmark rules (s3-bucket-public-write-prohibited, ec2-imdsv2-check, encrypted-volumes) for continuous compliance monitoring
+- **Lambda**: Built Python-based auto-remediation functions for S3 security violations with proper error handling and logging
+- **EventBridge**: Created event-driven triggers to automatically respond to Config compliance changes
+- **S3**: Implemented bucket hardening (public access blocking, default encryption) following CIS security standards
+- **EC2**: Configured instances with IMDSv1/v2 settings and security group best practices
+- **IAM**: Applied least-privilege permissions for Lambda execution roles and service integrations
+- **CloudWatch**: Set up compliance dashboards and logging for monitoring remediation activities
+
+</details>
+
+<details>
+<summary><strong>Security & Compliance Skills</strong></summary>
+
+- **CIS Benchmarks**: Implemented AWS Foundations Benchmark v1.4 controls for SOC2 compliance readiness
+- **Security Automation**: Designed event-driven remediation workflows to eliminate manual security tasks
+- **Vulnerability Remediation**: Automated fixes for critical security misconfigurations (public S3 buckets, unencrypted storage)
+- **Compliance Monitoring**: Real-time detection and reporting of security violations using Security Hub integration
+
+</details>
+
+<details>
+<summary><strong>Technical Implementation</strong></summary>
+
+- **Python Scripting**: Developed Lambda functions with boto3 for AWS service automation and error handling
+- **Event-Driven Architecture**: Implemented serverless patterns using EventBridge for scalable security automation
+- **AWS CLI Operations**: Command-line testing and validation of security configurations and compliance status
+- **Infrastructure Security**: Applied defense-in-depth strategies with automated security controls and monitoring
+
+</details>
+
+<details>
+<summary><strong>Problem-Solving Approach</strong></summary>
+
+- **Testing & Validation**: Created controlled security violations to verify detection and remediation workflows
+- **Documentation**: Maintained clear technical documentation for compliance audit requirements
+- **Troubleshooting**: Debugged IAM permissions, Lambda timeouts, and Config rule evaluation timing issues
+
+</details>
+
+---
+
 ## Lessons Learned
 
 ### Key Challenges & Solutions
 
-**Lambda Function Timeouts**: Lambda functions were timing out during S3 remediation tasks. **Solution**: Increased timeout from default 3 seconds to 2 minutes and optimized code to handle multiple S3 operations efficiently.
+**Lambda Function Timeouts**: Lambda functions were timing out during S3 remediation tasks.
+- **Solution**: Increased timeout from default 3 seconds to 2 minutes and optimized code to handle multiple S3 operations efficiently.
 
-**IAM Permission Issues**: Initial Lambda execution failed due to insufficient permissions. **Solution**: Added specific S3 permissions (s3:PutEncryptionConfiguration, s3:PutPublicAccessBlock) to the Lambda execution role.
+**IAM Permission Issues**: Initial Lambda execution failed due to insufficient permissions.
+- **Solution**: Added specific S3 permissions (s3:PutEncryptionConfiguration, s3:PutPublicAccessBlock) to the Lambda execution role.
 
-**Config Rule Evaluation Delays**: AWS Config rules took 15+ minutes to detect violations. **Solution**: Implemented manual Config rule evaluation triggers and optimized EventBridge patterns for faster detection.
+**Config Rule Evaluation Delays**: AWS Config rules took 15+ minutes to detect violations.
+- **Solution**: Implemented manual Config rule evaluation triggers and optimized EventBridge patterns for faster detection.
 
-**EventBridge Rule Configuration**: Auto-remediation wasn't triggering consistently. **Solution**: Fixed EventBridge event patterns to properly filter Config compliance change notifications and target the correct Lambda function.
+**EventBridge Rule Configuration**: Auto-remediation wasn't triggering consistently.
+- **Solution**: Fixed EventBridge event patterns to properly filter Config compliance change notifications and target the correct Lambda function.
 
 ### What I Learned
 
@@ -192,36 +242,6 @@ Next steps for enterprise deployment:
 **Real-Time Notifications**: Add SNS alerts to notify security teams when violations occur and are remediated.
 
 **Cost Monitoring**: Implement AWS Budgets to track Lambda execution costs as the system scales.
-
----
-
-## Skills Demonstrated & Technologies Used
-
-### Core AWS Services Implemented
-- **AWS Config**: Configured CIS benchmark rules (s3-bucket-public-write-prohibited, ec2-imdsv2-check, encrypted-volumes) for continuous compliance monitoring
-- **Lambda**: Built Python-based auto-remediation functions for S3 security violations with proper error handling and logging
-- **EventBridge**: Created event-driven triggers to automatically respond to Config compliance changes
-- **S3**: Implemented bucket hardening (public access blocking, default encryption) following CIS security standards
-- **EC2**: Configured instances with IMDSv1/v2 settings and security group best practices
-- **IAM**: Applied least-privilege permissions for Lambda execution roles and service integrations
-- **CloudWatch**: Set up compliance dashboards and logging for monitoring remediation activities
-
-### Security & Compliance Skills
-- **CIS Benchmarks**: Implemented AWS Foundations Benchmark v1.4 controls for SOC2 compliance readiness
-- **Security Automation**: Designed event-driven remediation workflows to eliminate manual security tasks
-- **Vulnerability Remediation**: Automated fixes for critical security misconfigurations (public S3 buckets, unencrypted storage)
-- **Compliance Monitoring**: Real-time detection and reporting of security violations using Security Hub integration
-
-### Technical Implementation
-- **Python Scripting**: Developed Lambda functions with boto3 for AWS service automation and error handling
-- **Event-Driven Architecture**: Implemented serverless patterns using EventBridge for scalable security automation
-- **AWS CLI Operations**: Command-line testing and validation of security configurations and compliance status
-- **Infrastructure Security**: Applied defense-in-depth strategies with automated security controls and monitoring
-
-### Problem-Solving Approach
-- **Testing & Validation**: Created controlled security violations to verify detection and remediation workflows
-- **Documentation**: Maintained clear technical documentation for compliance audit requirements
-- **Troubleshooting**: Debugged IAM permissions, Lambda timeouts, and Config rule evaluation timing issues
 
 ---
 
