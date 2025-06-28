@@ -3,6 +3,17 @@
 
 ---
 
+## Project Overview
+**CIS Benchmark Compliance** | **Automated Remediation** | **Security Monitoring** | **SOC2 Preparation**
+
+**The Challenge**: MedGuard FinTech needed automated AWS security hardening to meet SOC2 requirements while maintaining developer agility
+
+**Solution**: Implemented CIS-compliant automation using AWS Config, Lambda, and Security Hub for continuous compliance monitoring
+
+**Impact**: 90%+ compliance score, 8-minute MTTR, zero manual security interventions required
+
+---
+
 ## Business Impact & Results
 
 | Metric | Before | After | Impact |
@@ -18,16 +29,7 @@
 - **Operational Efficiency**<sup>[4](#ref4)</sup>: 95% reduction in manual security monitoring
 - **Cost Optimization**<sup>[5](#ref5)</sup>: $50K/year saved vs. third-party compliance tools
 
----
 
-## Project Overview
-**CIS Benchmark Compliance** | **Automated Remediation** | **Security Monitoring** | **SOC2 Preparation**
-
-**The Challenge**: MedGuard FinTech needed automated AWS security hardening to meet SOC2 requirements while maintaining developer agility
-
-**Solution**: Implemented CIS-compliant automation using AWS Config, Lambda, and Security Hub for continuous compliance monitoring
-
-**Impact**: 90%+ compliance score, 8-minute MTTR, zero manual security interventions required
 
 ---
 
