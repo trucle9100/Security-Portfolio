@@ -1,6 +1,10 @@
 # Enterprise Self-Healing Infrastructure | 99.97% Uptime Guarantee
-*Automated EC2 Recovery with CloudWatch Monitoring & SNS Alerting*
 
+##### *Automated EC2 Recovery with CloudWatch Monitoring & SNS Alerting*
+
+---
+
+🟢 Skills Demonstrated: Cloud Architecture • Infrastructure Automation • Cost Optimization • High Availability • Monitoring & Alerting • Incident Response • Root Cause Analysis • Troubleshooting
 
 ---
 
@@ -8,12 +12,30 @@
 
 ![Architecture Diagram](diagram/autohealing_diagram.png)
 
-**Core Components: 🟢**
-- **EC2 Instance**: Amazon Linux 2 with Apache web server
-- **CloudWatch Monitoring**: CPU utilization metrics and custom alarms
-- **SNS Notifications**: Email and Slack alert delivery
-- **IAM Roles**: Service permissions for automated recovery actions
-- **Security Groups**: Controlled access for HTTP and SSH traffic
+
+Technologies: AWS EC2 • Auto Scaling Groups • CloudWatch • Lambda • SNS • CloudFormation • Python • IAM • CloudTrail • Systems Manager
+
+
+**Core Components: 🟡 (FORMAT PURPOSES ONLY, TO REPLACE CORE INFO ABOVE)**
+
+```
+AWS Security Automation Pipeline
+├── AWS Config (Detection): CIS benchmark rule monitoring
+│   ├── s3-bucket-public-write-prohibited
+│   ├── ec2-imdsv2-check
+│   └── encrypted-volumes
+├── EventBridge (Orchestration): Real-time violation triggers
+│   └── Config Rules Compliance Change
+├── Lambda (Auto-Remediation): Automated security fixes
+│   ├── S3 Public Access Block
+│   └── S3 Default Encryption
+└── CloudWatch (Monitoring): Centralized compliance visibility
+    └── Compliance Dashboard
+```
+
+---
+
+
 
 ---
 
@@ -199,8 +221,6 @@ The technical implementation follows AWS Well-Architected principles and demonst
 
 # NEW VERSION
 
-# AWS Auto-Healing Infrastructure Solution
-
 ## 🎯 Executive Summary 🟢
 
 **Business Challenge**: Manual intervention for failed infrastructure components costs enterprises an average of $100K annually in downtime costs and emergency incident response.
@@ -211,7 +231,6 @@ The technical implementation follows AWS Well-Architected principles and demonst
 - ⚡ **99.97% system availability** (exceeding enterprise SLA requirements)
 - 💰 **$75K annual cost savings** in reduced downtime and manual intervention costs
 - 🚀 **5-minute mean time to recovery (MTTR)** from 2-hour manual response time
-
 
 
 ## 💼 Business Value Delivered 🟢
@@ -270,20 +289,28 @@ Enterprise-grade reliability standards
 Cost-conscious engineering approach
 
 
-🟢 (MOVE TOWARDS TOP) Technologies: AWS EC2 • Auto Scaling Groups • CloudWatch • Lambda • SNS • CloudFormation • Python • IAM • CloudTrail • Systems Manager
-
-🟢 (MOVE TOWARDS TOP) Skills Demonstrated: Cloud Architecture • Infrastructure Automation • Cost Optimization • High Availability • Monitoring & Alerting • Incident Response • Root Cause Analysis • Troubleshooting
 
 
-## Lessons Learned 🟡 (FORMAT PURPOSES ONLY)
 
-### Key Challenges & Solutions
+##  Key Challenges & Solutions 🟡 (FORMAT PURPOSES ONLY)
+
+### IAM Permission Issues
+
+**Challenge:** Initial Lambda execution failed due to insufficient permissions.
+
+<details>
+<summary><strong>Solution</strong></summary>
+- Added specific S3 permissions (s3:PutEncryptionConfiguration, s3:PutPublicAccessBlock) to the Lambda execution role.
+
 
 <details>
 <summary><strong>Lambda Function Timeouts</strong></summary>
 
 - **Challenge:** Lambda functions were timing out during S3 remediation tasks.
 - **Solution**: Increased timeout from default 3 seconds to 2 minutes and optimized code to handle multiple S3 operations efficiently.
+
+</details>
+
 
 </details>
 
@@ -313,7 +340,7 @@ Cost-conscious engineering approach
 </details>
 
 
-### What I Learned 🟡 (FORMAT PURPOSES ONLY)
+## Lessons Learned 🟡 (FORMAT PURPOSES ONLY)
 
 **Automation Reduces Human Error**: Manual security fixes are slow and error-prone. Automated Lambda remediation ensures consistent, fast responses to security violations.
 
