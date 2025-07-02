@@ -1,53 +1,14 @@
 # Enterprise Self-Healing Infrastructure | 99.97% Uptime Guarantee
 *Automated EC2 Recovery with CloudWatch Monitoring & SNS Alerting*
 
----
-
-
-## Business Impact & Results
-
-| Metric | Before | After | Impact |
-|--------|--------|-------|---------|
-| System Downtime<sup>[1](#ref1)</sup> | 45 min/month | 2 min/month | **95% reduction** |
-| Manual Monitoring<sup>[2](#ref2)</sup> | 24/7 manual | 95% automated | **95% automation** |
-| Recovery Time<sup>[3](#ref3)</sup> | 15 minutes | 30 seconds | **97% faster** |
-| Alert Response<sup>[4](#ref4)</sup> | 5+ minutes | <30 seconds | **90% improvement** |
-| Infrastructure Reliability<sup>[5](#ref5)</sup> | 95% uptime | 99.97% uptime | **5x improvement** |
-
-**Business Value Delivered:**
-- **Availability**<sup>[6](#ref6)</sup>: 99.97% uptime through automated recovery mechanisms
-- **Operational Efficiency**<sup>[2](#ref2)</sup>: 95% reduction in manual infrastructure monitoring
-- **Cost Optimization**<sup>[7](#ref7)</sup>: Reduced operational overhead through automated healing
-- **Alert Accuracy**: Real-time notifications with zero false positives
 
 ---
 
-## Project Overview
-**Infrastructure Automation** | **CloudWatch Monitoring** | **Auto-Recovery Patterns** | **Proactive Alerting**
-
-**The Challenge**: Web applications needed automated recovery from system failures without manual intervention
-
-**Solution**: Implemented self-healing infrastructure using CloudWatch alarms with SNS notifications and EC2 auto-recovery
-
-**Impact**: 99.97% uptime, 95% reduction in manual monitoring, automated failure detection and recovery
-
----
-
-## Skills Demonstrated
-- **AWS CloudWatch**: Metric monitoring, alarm configuration, and threshold management
-- **Amazon SNS**: Multi-channel notification systems and alert routing
-- **EC2 Management**: Instance monitoring, auto-recovery, and health checks
-- **IAM Security**: Service roles, least-privilege access, and cross-service permissions
-- **Infrastructure Automation**: Self-healing patterns and proactive monitoring
-- **DevOps Practices**: Automated testing, stress simulation, and system validation
-
----
-
-## Architecture Built
+## 🏗️ Architecture Overview 🟢
 
 ![Architecture Diagram](diagram/autohealing_diagram.png)
 
-**Core Components:**
+**Core Components: 🟢**
 - **EC2 Instance**: Amazon Linux 2 with Apache web server
 - **CloudWatch Monitoring**: CPU utilization metrics and custom alarms
 - **SNS Notifications**: Email and Slack alert delivery
@@ -56,9 +17,13 @@
 
 ---
 
-## Key Technical Implementation 🟢
+## Technical Scripts 🟢
 
 ### 1. EC2 Instance Configuration
+
+<details>
+<summary><strong>Web Server Installation Script</strong></summary>
+
 ```bash
 #!/bin/bash
 # Web Server Installation Script
@@ -69,7 +34,14 @@ sudo systemctl enable httpd
 echo "<h1>Health Check Page</h1>" | sudo tee /var/www/html/index.html
 ```
 
+</details>
+
+
+
 ### 2. CloudWatch Alarm Setup
+<details>
+<summary><strong>Create CPU utilization alarm</strong></summary>
+
 ```bash
 # Create CPU utilization alarm
 aws cloudwatch put-metric-alarm \
@@ -84,13 +56,21 @@ aws cloudwatch put-metric-alarm \
     --evaluation-periods 1
 ```
 
+</details>
+
 ### 3. Stress Testing for Validation
+
+<details>
+<summary><strong>SSH into instance and simulate high CPU load</strong></summary>
+
 ```bash
 # SSH into instance and simulate high CPU load
 sudo amazon-linux-extras install epel -y
 sudo yum install stress -y
 stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 ```
+
+</details>
 
 ---
 
@@ -103,7 +83,7 @@ stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 
 ---
 
-## Technical Implementation Highlights
+## Technical Implementation 🟢
 
 ### Automated Monitoring
 - **CloudWatch Integration**: Real-time CPU utilization monitoring with 5-minute data points
@@ -122,7 +102,7 @@ stress --cpu 2 --timeout 300  # Simulate 100% CPU for 5 mins
 
 ---
 
-## Production Enhancements
+## Future Production Enhancements 🟢
 Next steps for enterprise deployment:
 - **Auto Scaling Groups**: Horizontal scaling with health check replacement
 - **Application Load Balancer**: Multi-AZ distribution with health checks
@@ -147,7 +127,7 @@ The technical implementation follows AWS Well-Architected principles and demonst
 ---
 
 <details>
-<summary><strong>📋 Click to expand baseline methodology and industry benchmarks</strong></summary>
+<summary><strong>📋 🟢 Click to expand baseline methodology and industry benchmarks</strong></summary>
 
 ### Baseline Metrics Sources
 
@@ -212,7 +192,7 @@ The technical implementation follows AWS Well-Architected principles and demonst
 
 ---
 
-*This implementation demonstrates enterprise AWS infrastructure automation using self-healing patterns. All resources configured following production-grade monitoring and alerting best practices.*
+*🟢 This implementation demonstrates enterprise AWS infrastructure automation using self-healing patterns. All resources configured following production-grade monitoring and alerting best practices.*
 
 
 
@@ -232,15 +212,7 @@ The technical implementation follows AWS Well-Architected principles and demonst
 - 💰 **$75K annual cost savings** in reduced downtime and manual intervention costs
 - 🚀 **5-minute mean time to recovery (MTTR)** from 2-hour manual response time
 
-## 🏗️ Architecture Overview 🟢
 
-![Auto-Healing Architecture](diagrams/auto-healing-architecture.png)
-
-### High-Level System Design 🟢
-- **CloudWatch Alarms** monitor EC2 instance health metrics and system performance
-- **SNS (Simple Notification Service)** distributes real-time alerts to multiple channels
-- **Auto Scaling Groups** maintain desired capacity with automated instance replacement
-- **Lambda Functions** orchestrate recovery actions and incident response workflows
 
 ## 💼 Business Value Delivered 🟢
 
@@ -259,23 +231,11 @@ The technical implementation follows AWS Well-Architected principles and demonst
 - Automated 95% of routine recovery procedures and troubleshooting workflows
 - Enabled team to focus on strategic initiatives vs. reactive incident management
 
-## 🛠️ Technical Implementation 🟢
-
-### Technology Stack
-- **Compute**: EC2 instances with Auto Scaling Groups across multiple Availability Zones
-- **Monitoring**: CloudWatch Metrics, CloudWatch Logs, SNS for alerting
-- **Automation**: Lambda (Python 3.11), EventBridge for event-driven architecture
-- **Infrastructure as Code**: CloudFormation templates for repeatable deployment
-- **Security**: IAM roles with least-privilege access and security best practices
-
-### Key Features
-- Automated health check monitoring with configurable thresholds
-- Multi-AZ deployment for disaster recovery and high availability
-- Automated instance replacement on failure detection
-- Real-time notification system with escalation paths and SLA management
-- Comprehensive logging and monitoring dashboard for root cause analysis
 
 ### Infrastructure Automation Code Sample 🟢
+<details>
+<summary><strong>Code</strong></summary>
+    
 ```python
 # CloudWatch alarm configuration for EC2 health monitoring
 def create_health_alarm(instance_id):
@@ -296,10 +256,12 @@ def create_health_alarm(instance_id):
     )
 ```
 
+</details>
+
 📊 Performance Metrics 🟢
 MetricBefore ImplementationAfter ImplementationImprovementSystem Uptime97.5%99.97%+2.47%MTTR (Mean Time To Recovery)2 hours5 minutes96% reductionManual Interventions40/month2/month95% reductionOperational Cost$100K/year$25K/year75% savingsIncident Detection Time15 minutes<1 minute93% faster
 
-🏆 Recognition 🟢 (Reformat to be similar to below "Technologies" & " Skills Demonstrated"
+🏆 Recognition 🟡 (Reformat to be similar to below "Technologies" & " Skills Demonstrated")
 This solution demonstrates:
 
 AWS Well-Architected Framework compliance
@@ -308,6 +270,53 @@ Enterprise-grade reliability standards
 Cost-conscious engineering approach
 
 
-🟢 Technologies: AWS EC2 • Auto Scaling Groups • CloudWatch • Lambda • SNS • CloudFormation • Python • IAM • CloudTrail • Systems Manager
-🟢 Skills Demonstrated: Cloud Architecture • Infrastructure Automation • Cost Optimization • High Availability • Monitoring & Alerting • Incident Response • Root Cause Analysis • Troubleshooting
+🟢 (MOVE TOWARDS TOP) Technologies: AWS EC2 • Auto Scaling Groups • CloudWatch • Lambda • SNS • CloudFormation • Python • IAM • CloudTrail • Systems Manager
 
+🟢 (MOVE TOWARDS TOP) Skills Demonstrated: Cloud Architecture • Infrastructure Automation • Cost Optimization • High Availability • Monitoring & Alerting • Incident Response • Root Cause Analysis • Troubleshooting
+
+
+## Lessons Learned 🟡 (FORMAT PURPOSES ONLY)
+
+### Key Challenges & Solutions
+
+<details>
+<summary><strong>Lambda Function Timeouts</strong></summary>
+
+- **Challenge:** Lambda functions were timing out during S3 remediation tasks.
+- **Solution**: Increased timeout from default 3 seconds to 2 minutes and optimized code to handle multiple S3 operations efficiently.
+
+</details>
+
+
+<details>
+<summary><strong>IAM Permission Issues</strong></summary>
+
+- **Challenge:** Initial Lambda execution failed due to insufficient permissions.
+- **Solution**: Added specific S3 permissions (s3:PutEncryptionConfiguration, s3:PutPublicAccessBlock) to the Lambda execution role.
+
+</details>
+
+<details>
+<summary><strong>Config Rule Evaluation Delays</strong></summary>
+
+- **Challenge:** AWS Config rules took 15+ minutes to detect violations.
+- **Solution**: Implemented manual Config rule evaluation triggers and optimized EventBridge patterns for faster detection.
+
+</details>
+
+<details>
+<summary><strong>EventBridge Rule Configuration</strong></summary>
+
+- **Challenge:** Auto-remediation wasn't triggering consistently.
+- **Solution**: Fixed EventBridge event patterns to properly filter Config compliance change notifications and target the correct Lambda function.
+
+</details>
+
+
+### What I Learned 🟡 (FORMAT PURPOSES ONLY)
+
+**Automation Reduces Human Error**: Manual security fixes are slow and error-prone. Automated Lambda remediation ensures consistent, fast responses to security violations.
+
+**Testing is Critical**: Always test automation by intentionally breaking things. This lab taught me to validate that detection and remediation actually work before deploying to production.
+
+**AWS Services Integration**: Learned how AWS Config, EventBridge, and Lambda work together to create a complete compliance monitoring and remediation pipeline.
