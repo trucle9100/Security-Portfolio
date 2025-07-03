@@ -18,7 +18,7 @@
 
 ## Architecture Overview
 
-![Architecture Diagram](diagrams/autohealing_diagram.png)
+![Architecture Diagram](diagram/autohealing_diagram.png)
 
 **Technologies:** AWS EC2 • CloudWatch • SNS • IAM • Apache • Linux
 
