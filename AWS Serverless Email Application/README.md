@@ -4,7 +4,7 @@
 
 ---
 
-**Skills Demonstrated:** Serverless Architecture • API Development • Workflow Orchestration • Error Handling • Cost Optimization • Infrastructure Monitoring • Security Best Practices
+**Skills Demonstrated:** `Serverless Architecture` `API Development` `Workflow Orchestration` `Error Handling` `Cost Optimization` `Infrastructure Monitoring` `Security Best Practices` `Lambda` `API Gateway` `Step Functions` `SES` `S3` `CloudWatch` `IAM` `Python` `RESTful API` `CORS`
 
 ## Executive Summary
 
@@ -23,9 +23,7 @@
 
 ![Architecture Diagram](diagram/ServerlessApplication.png)
 
-**Technologies:** AWS Lambda • API Gateway • Step Functions • SES • S3 • CloudWatch • IAM • Python
-
-**High-Level System Design:**
+**Technology Highlights:** 
 * **API Gateway** provides RESTful endpoints with CORS configuration for secure email submission
 * **Step Functions** orchestrates email workflows with retry logic and comprehensive error handling
 * **Lambda Functions** execute serverless compute for email processing with Python 3.10
@@ -34,7 +32,8 @@
 * **CloudWatch** monitors system health with logs and metrics for operational visibility
 * **IAM roles** enforce least-privilege access control for all service interactions
 
-**Serverless Email Processing Pipeline:**
+**High-Level System Design:**
+
 ```
 ├── API Gateway (Entry Point): REST API with CORS
 │   └── POST /sendEmail endpoint
@@ -346,12 +345,6 @@ This project represents a hands-on AWS serverless email platform laboratory exer
 - **Email Delivery**: Current implementation uses SES sandbox mode; production deployment requires SES production access approval
 
 The technical implementation follows AWS Well-Architected principles and demonstrates real-world serverless architecture patterns suitable for production environments.
-
----
-
-## Recognition
-
-**AWS Lambda • API Gateway • Step Functions • SES • S3 • CloudWatch • IAM • Python • Serverless Architecture • RESTful API • CORS**
 
 ---
 
