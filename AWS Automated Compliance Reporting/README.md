@@ -4,7 +4,7 @@
 
 ---
 
-**Skills Demonstrated:** HIPAA Compliance • Cloud Security • Automated Monitoring • Risk Management • Incident Response
+**Skills Demonstrated:** `HIPAA Compliance` `Cloud Security` `Automated Monitoring` `Risk Management` `Incident Response` `AWS Config` `Lambda` `KMS` `EventBridge` `SNS` `CloudTrail` `CloudWatch` `Python 3.11` 
 
 ## Executive Summary
 
@@ -23,9 +23,7 @@
 
 ![Compliance Monitoring Flow](images/Monitoring_Automation.png)
 
-**Technologies:** AWS Config • Lambda • KMS • EventBridge • SNS • CloudTrail • CloudWatch • Python 3.11
-
-**High-Level System Design:**
+**Technologies/Functions:**
 * **AWS Config** monitors EBS volumes for encryption compliance and PHI resource tracking
 * **KMS (Key Management Service)** provides enterprise-grade encryption for all compliance data
 * **EventBridge** orchestrates real-time event-driven compliance automation
@@ -34,7 +32,7 @@
 * **CloudTrail with log validation** maintains immutable audit trails for regulatory requirements
 * **CloudWatch Dashboards** provide executive visibility into compliance metrics
 
-**HIPAA Compliance Automation Pipeline:**
+**High-Level System Design:**
 ```
 ├── AWS Config (Detection): Continuous compliance monitoring
 │   ├── testclient-phi-encryption-rule
@@ -313,7 +311,9 @@ aws events put-targets \
 
 ## Technical Implementation
 
-### CloudWatch Dashboard Configuration
+<details>
+<summary><strong>CloudWatch Dashboard Configuration</strong></summary>
+    
 ```bash
 # Create comprehensive dashboard
 aws cloudwatch put-dashboard \
@@ -336,8 +336,11 @@ aws cloudwatch put-dashboard \
     ]
   }'
 ```
+</details>
 
-### CloudTrail Audit Configuration
+<details>
+<summary><strong>CloudTrail Audit Configuration</strong></summary>
+
 ```bash
 # Create CloudTrail for EBS operations
 aws cloudtrail create-trail \
@@ -351,6 +354,8 @@ aws cloudtrail create-trail \
 # Start logging
 aws cloudtrail start-logging --name testclient-audit-trail
 ```
+
+</details>
 
 ---
 
@@ -448,12 +453,6 @@ This project represents a hands-on AWS HIPAA compliance monitoring laboratory ex
 - **Detection Mechanism**: Current implementation focuses on detection and alerting; full auto-remediation requires additional Lambda functions and IAM permissions
 
 The technical implementation follows HIPAA Security Rule requirements and demonstrates real-world healthcare compliance patterns suitable for production environments.
-
----
-
-## Recognition
-
-**AWS Config • Lambda • KMS • EventBridge • SNS • CloudTrail • CloudWatch • Python 3.11 • HIPAA Compliance**
 
 ---
 
