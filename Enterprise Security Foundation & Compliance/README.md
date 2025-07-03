@@ -4,7 +4,7 @@
 
 ---
 
-**Skills Demonstrated**: Security Architecture • Compliance Monitoring • Identity Management • Risk Assessment • Cloud Security • Security Automation • Executive Reporting
+**Skills Demonstrated**: `Security Architecture` `Compliance Monitoring` `Identity Management` `Risk Assessment` `Cloud Security` `Security Automation` `Executive Reporting` `Security Hub` `Config` `IAM` `CloudWatch` `S3` `EC2` `EBS`
 
 ## Executive Summary
 
@@ -23,15 +23,13 @@
 
 ![Architecture Diagram](images/securitycompliancediagram2.png)
 
-**Technologies**: Security Hub • Config • IAM • CloudWatch • S3 • EC2 • EBS
-
-**High-Level System Design**:
+**Technologies/Functions**: 
 * **Security Hub** provides unified security posture management with CIS AWS Foundations Benchmark scoring
 * **AWS Config** enables continuous compliance monitoring through automated rule evaluation
 * **IAM** implements advanced security patterns with permission boundaries and cross-account roles
 * **CloudWatch** delivers real-time security metrics visualization and executive dashboards
 
-**AWS Security Compliance Pipeline**:
+**High-Level System Design**:
 ```
 ├── Security Hub (Central Management): Enterprise security posture
 │   ├── CIS AWS Foundations Benchmark
@@ -158,7 +156,6 @@ aws s3api put-bucket-encryption \
 | Cross-Account IAM Role | ![IAM Roles](images/xAccountRole.jpg) |
 | Developer IAM Role | ![Developer Role](images/DeveloperRole.jpg) |
 | S3 Public Access Blocked | ![S3 Security](images/S3BlockPublicAccess.jpg) |
-| CloudWatch Dashboard | ![Dashboard](images/05-realtime-compliance-dashboard.png) |
 
 ---
 
