@@ -1,7 +1,7 @@
 # AWS Auto-Healing Infrastructure Solution
 ##### *Automated EC2 Recovery with CloudWatch Monitoring & SNS Alerting*
 ---
-**Skills Demonstrated:** Cloud Architecture • Infrastructure Automation • Cost Optimization • Monitoring & Alerting • Incident Response • Root Cause Analysis • Technical Documentation • Problem-solving • SLA Management
+**Skills Demonstrated:** `Cloud Architecture` `Infrastructure Automation` `Cost Optimization` `Monitoring & Alerting` `Incident Response` `Risk Assessment` `Root Cause Analysis` `Technical Documentation` `Problem-solving` `SLA Management` `EC2` `CloudWatch` `SNS` `IAM` `Apache` `Linux`
 
 ## Executive Summary
 
@@ -20,15 +20,13 @@
 
 ![Architecture Diagram](diagram/autohealing_diagram.png)
 
-**Technologies:** AWS EC2 • CloudWatch • SNS • IAM • Apache • Linux
-
-**High-Level System Design:**
+**Technologies Highlights:** 
 - **CloudWatch Alarms** monitor EC2 instance health metrics and system performance
 - **SNS (Simple Notification Service)** distributes real-time alerts to multiple channels for incident management
 - **IAM (Identity and Access Management)** roles with least-privilege access for security best practices
 - **Single EC2 instance with CloudWatch monitoring** demonstrating core troubleshooting and root cause analysis capabilities
 
-**AWS Auto-Healing Pipeline:**
+**High-Level System Design:**
 ```
 ├── EC2 Instance (Web Server): Apache httpd service
 │   ├── Health check endpoint (/index.html)
@@ -167,9 +165,8 @@ aws cloudwatch get-metric-statistics \
 - Comprehensive CloudWatch logging for troubleshooting and root cause analysis
 - Stress testing capabilities for system validation
 
----
-
-## Infrastructure Monitoring Code Sample
+<details>
+<summary><strong>Infrastructure Monitoring Code Sample</strong></summary>
 
 ```python
 import boto3
@@ -212,6 +209,7 @@ def create_comprehensive_monitoring(instance_id, sns_topic_arn):
         AlarmDescription='Alert on instance or system status check failures'
     )
 ```
+</details>
 
 ---
 
@@ -301,12 +299,6 @@ This project represents a hands-on AWS infrastructure automation laboratory exer
 - **Recovery Mechanism**: Current implementation focuses on monitoring and alerting; full auto-recovery requires additional AWS services like Auto Scaling Groups
 
 The technical implementation follows AWS Well-Architected principles and demonstrates real-world infrastructure automation patterns suitable for production environments.
-
----
-
-### Demonstrates:
-
-`CIS Benchmarks` `Security Automation` `Compliance Monitoring` `Risk Assessment` `Root Cause Analysis` `Problem Resolution` `Technical Documentation` `Remediation Workflows` `Audit Management`
 
 ---
 
