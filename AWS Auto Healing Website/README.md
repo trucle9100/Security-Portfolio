@@ -129,10 +129,8 @@ aws cloudwatch get-metric-statistics \
 
 | Component | Screenshot |
 |-----------|------------|
-| CloudWatch CPU Alarm Configuration | ![CPU Alarm](images/cpu_alarm_config.png) |
-| SNS Email Alert Received | ![Email Alert](images/sns_email_alert.png) |
-| EC2 Instance Monitoring Dashboard | ![Monitoring](images/cloudwatch_dashboard.png) |
-| IAM Role Permissions | ![IAM Role](images/iam_role_config.png) |
+| CloudWatch CPU Alarm Configuration | ![CPU Alarm](images/ThresholdAlarm.png) |
+| SNS Email Alert Received | ![Email Alert](images/RecoveryEmail.png) |
 
 ---
 
@@ -303,103 +301,6 @@ This project represents a hands-on AWS infrastructure automation laboratory exer
 - **Recovery Mechanism**: Current implementation focuses on monitoring and alerting; full auto-recovery requires additional AWS services like Auto Scaling Groups
 
 The technical implementation follows AWS Well-Architected principles and demonstrates real-world infrastructure automation patterns suitable for production environments.
-
----
-
-## Recognition
-
-**Compliance & Best Practices:** AWS Well-Architected Framework • Security Best Practices • Cost Optimization • Operational Excellence • Performance Efficiency • Reliability Pillar
-
-## Compliance & Best Practices
-
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
-
----
-
-### Demonstrates:
-
-| Security & Compliance | Technical Implementation | Business Impact |
-|:---------------------|:------------------------|:----------------|
-| **CIS Benchmark Implementation** | **Security Automation** | **Risk Assessment** |
-| Industry-standard security controls | Event-driven remediation patterns | Proactive vulnerability identification |
-| **Compliance Monitoring** | **Root Cause Analysis** | **Problem Resolution** |
-| Real-time violation detection | Systematic issue investigation | Automated fix deployment |
-| **Audit Management** | **Technical Documentation** | **Remediation Workflows** |
-| Continuous compliance tracking | Detailed logging and reporting | Self-healing infrastructure |
-
-## Compliance & Best Practices
-
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
-
----
-
-### Demonstrates:
-
-| Skill Area | Implementation Level |
-|:-----------|:-------------------|
-| **CIS Benchmark Implementation** | ████████████ Advanced |
-| **Security Automation** | ████████████ Advanced |
-| **Compliance Monitoring** | ████████████ Advanced |
-| **Risk Assessment** | ██████████░░ Proficient |
-| **Root Cause Analysis** | ██████████░░ Proficient |
-| **Problem Resolution** | ████████████ Advanced |
-| **Technical Documentation** | ████████████ Advanced |
-| **Remediation Workflows** | ████████████ Advanced |
-| **Audit Management** | ██████████░░ Proficient |
-
-## Compliance & Best Practices
-
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
-
----
-
-### Demonstrates:
-
-<table>
-<tr>
-<td width="50%">
-
-**Technical Excellence**
-- CIS Benchmark Implementation
-- Security Automation  
-- Root Cause Analysis
-- Technical Documentation
-- Remediation Workflows
-
-</td>
-<td width="50%">
-
-**Business Value**
-- Risk Assessment
-- Compliance Monitoring
-- Problem Resolution
-- Audit Management
-- DevSecOps Practices
-
-</td>
-</tr>
-</table>
-
-## Compliance & Best Practices
-
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
-
----
-
-### Demonstrates:
-
-**▸ Security & Compliance**
-CIS Benchmark Implementation | Compliance Monitoring | Audit Management
-
-**▸ Technical Capabilities**  
-Security Automation | Root Cause Analysis | Technical Documentation
-
-**▸ Business Impact**
-Risk Assessment | Problem Resolution | Remediation Workflows
-
-## Compliance & Best Practices
-
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
 
 ---
 
