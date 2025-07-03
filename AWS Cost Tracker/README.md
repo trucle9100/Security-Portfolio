@@ -3,7 +3,7 @@
 
 ---
 
-**Skills Demonstrated**: FinOps • Cloud Cost Management • Automation • Serverless Architecture • Security Best Practices
+**Skills Demonstrated**: `FinOps` `Cloud Cost Management` `Automation` `Serverless Architecture` `Security Best Practices` `AWS Budgets` `Lambda` `SNS` `CloudWatch` `IAM` `Python`
 
 ## Executive Summary
 
@@ -22,16 +22,14 @@
 
 ![Architecture Diagram](diagram/CostTracker_Diagram.png)
 
-**Technologies**: AWS Budgets • Lambda • SNS • CloudWatch • IAM • Python
-
-**High-Level System Design**:
+**Technology Highlights**: 
 * **AWS Budgets** monitors spending thresholds and triggers automated alerts for cost control
 * **SNS (Simple Notification Service)** distributes real-time budget alerts to stakeholders via email
 * **Lambda Functions** process budget events and orchestrate notification workflows
 * **IAM (Identity and Access Management)** roles with least-privilege access for secure service integration
 * **CloudWatch Logs** provides operational monitoring and audit trail for compliance
 
-**Cost Monitoring Pipeline**:
+**High-Level System Design**:
 ```
 ├── AWS Budgets (Detection): Threshold monitoring
 │   ├── Monthly spending limits
@@ -248,12 +246,6 @@ This project represents a hands-on AWS cost management laboratory exercise desig
 - **Notification Mechanism**: Current implementation focuses on email alerts; production environments would include multi-channel notifications and automated remediation
 
 The technical implementation follows AWS Well-Architected Framework cost optimization pillar and demonstrates real-world FinOps patterns suitable for enterprise cloud financial management.
-
----
-
-## Recognition
-
-**AWS Budgets • Lambda • SNS • CloudWatch • IAM • Python • FinOps • Cost Management • Automation**
 
 ---
 
