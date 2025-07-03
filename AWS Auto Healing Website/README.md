@@ -308,8 +308,6 @@ The technical implementation follows AWS Well-Architected principles and demonst
 
 ## Recognition
 
-**Technologies Used:** AWS EC2 • CloudWatch • SNS • IAM • Apache • Linux • Bash • Python • Stress Testing Tools
-
 **Compliance & Best Practices:** AWS Well-Architected Framework • Security Best Practices • Cost Optimization • Operational Excellence • Performance Efficiency • Reliability Pillar
 
 ---
