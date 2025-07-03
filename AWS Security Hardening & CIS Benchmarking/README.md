@@ -3,7 +3,7 @@
 
 ---
 
-**Skills Demonstrated:** Security Automation • CIS Benchmarks • Compliance Monitoring • Cloud Security • DevSecOps • Risk Assessment • Audit Management • Remediation Workflows
+**Skills Demonstrated:** `Security Automation` `CIS Benchmarks` `Compliance Monitoring` `Cloud Security` `DevSecOps` `Risk Assessment` `Audit Management` `Remediation Workflows` `AWS Config` `Lambda` `EventBridge` `CloudWatch` `Python` `Boto3` `IAM`
 
 ## Executive Summary
 
@@ -22,15 +22,14 @@
 
 ![Architecture Diagram](images/ComplianceAutomation.png)
 
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
-
-**High-Level System Design:**
+**Technology Highlights:** 
 - **AWS Config Rules** continuously monitor resource configurations against CIS benchmarks
 - **EventBridge** captures compliance change events and triggers automated workflows
 - **Lambda Functions** execute remediation logic to fix security violations automatically
 - **CloudWatch** provides centralized monitoring, logging, and compliance dashboards
 
-**AWS Security Automation Pipeline:**
+**High-Level System Design:**
+
 ```
 ├── AWS Config (Detection): CIS benchmark rule monitoring
 │   ├── s3-bucket-public-write-prohibited
@@ -322,9 +321,6 @@ This project represents a hands-on AWS security compliance laboratory exercise d
 
 The technical implementation follows AWS Well-Architected security pillar principles and demonstrates real-world compliance automation patterns suitable for production environments.
 
-## Recognition
-
-**Technologies:** AWS Config • Lambda • EventBridge • CloudWatch • Python • Boto3 • IAM
 
 ---
 
