@@ -23,7 +23,7 @@
 
 ![Compliance Monitoring Flow](images/Monitoring_Automation.png)
 
-**Technologies/Functions:**
+**Technology Highlights:**
 * **AWS Config** monitors EBS volumes for encryption compliance and PHI resource tracking
 * **KMS (Key Management Service)** provides enterprise-grade encryption for all compliance data
 * **EventBridge** orchestrates real-time event-driven compliance automation
