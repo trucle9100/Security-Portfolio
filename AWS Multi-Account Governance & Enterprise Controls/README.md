@@ -4,7 +4,7 @@
 
 ---
 
-**Skills Demonstrated**: Multi-Account Architecture • Cloud Governance • Service Control Policies • IT General Controls • Compliance Automation • Cost Optimization • Security Monitoring • Risk Management • Incident Response
+**Skills Demonstrated**: `Multi-Account Architecture` `Cloud Governance` `Service Control Policies` `IT General Controls` `Compliance Automation` `Cost Optimization` `Security Monitoring` `Risk Management` `Incident Response` `AWS Organizations` `Service Control Policies` `CloudTrail` `GuardDuty` `AWS Budgets` `IAM` `S3` `CloudWatch` `EC2` `Cost Anomaly Detection`
 
 ## Executive Summary
 
@@ -24,8 +24,6 @@
 
 **Architecture Flow:**
 ![Architecture Diagram](images/MultiAccountGovernaceDiagram.png)
-
-**Technologies**: AWS Organizations • Service Control Policies • CloudTrail • GuardDuty • AWS Budgets • IAM • S3 • CloudWatch • EC2 • Cost Anomaly Detection
 
 **High-Level System Design**:
 
@@ -403,12 +401,6 @@ This project represents a hands-on AWS multi-account governance laboratory exerc
 - **Governance Mechanism**: Current implementation focuses on preventive controls and monitoring; full automation requires additional AWS services like Control Tower and Lambda
 
 The technical implementation follows AWS Well-Architected Framework principles and demonstrates real-world multi-account governance patterns suitable for production environments.
-
----
-
-## Recognition
-
-**AWS Organizations • Service Control Policies • CloudTrail • GuardDuty • AWS Budgets • IAM • S3 • CloudWatch • EC2 • Cost Anomaly Detection**
 
 ---
 
