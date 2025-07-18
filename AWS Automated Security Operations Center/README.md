@@ -23,8 +23,6 @@
 
 ![Architecture Diagram](images/AutomatedSecurityOperation.png)
 
-**Technologies:** AWS Config • GuardDuty • Lambda • EventBridge • CloudWatch • SNS • Python • IAM • Step Functions
-
 **High-Level System Design:**
 * **AWS Config** continuously monitors resource configurations against security compliance rules
 * **Amazon GuardDuty** provides threat detection for AWS environment protection
