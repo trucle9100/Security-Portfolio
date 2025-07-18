@@ -4,7 +4,7 @@
 
 ---
 
-**Skills Demonstrated:** Security Automation • Compliance Monitoring • Incident Response • Cloud Governance • Risk Assessment • Python Development • Event-Driven Architecture
+**Skills Demonstrated:** `Security Automation` `Compliance Monitoring` `Incident Response` `Cloud Governance` `Risk Assessment` `Python Development` `Event-Driven Architecture`
 
 ## Executive Summary
 
